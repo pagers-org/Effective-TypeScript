@@ -1,7 +1,6 @@
 /**
  * 아래의 객체를 변경 불가능하게 만들어주세요.
  */
-
 type HumanProps = {
   firstName: string;
   surname: string;
@@ -16,7 +15,7 @@ type HumanProps = {
   };
 };
 
-const Bob: HumanProps = {
+const Bob: Readonly<HumanProps> = {
   firstName: 'Bob',
   surname: 'Keel',
   profile: {
@@ -27,4 +26,6 @@ const Bob: HumanProps = {
       second: 'Doctor',
     },
   },
-};
+} as const;
+
+Bob.profile.rating = '1';
