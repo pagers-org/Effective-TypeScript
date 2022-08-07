@@ -2,7 +2,20 @@
  * 아래의 객체들을 동일하게 선언할 수 있는 타입을 작성해주세요.
  */
 
-type Person = {};
+type Maybe<T> = T | null;
+type FullName = string;
+type NameDict = {
+  first: string | number;
+  last: string;
+};
+
+type Person = {
+  name: FullName | NameDict;
+  age: string | number;
+  sex: string;
+  birth: Maybe<string | Date>;
+  death?: Date;
+};
 
 const personA: Person = {
   name: 'Alan Turing',
