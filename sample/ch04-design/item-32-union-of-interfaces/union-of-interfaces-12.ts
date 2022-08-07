@@ -9,7 +9,7 @@ interface PersonWithBirth extends Name {
 
 type Person = Name | PersonWithBirth;
 function eulogize(p: Person) {
-  if ('placeOfBirth' in p) {
+  if ("placeOfBirth" in p) {
     p; // Type is PersonWithBirth
     const { dateOfBirth } = p; // OK, type is Date
   }

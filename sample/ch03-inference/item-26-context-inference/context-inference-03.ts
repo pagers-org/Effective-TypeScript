@@ -1,6 +1,6 @@
-type Language = 'JavaScript' | 'TypeScript' | 'Python';
+type Language = "JavaScript" | "TypeScript" | "Python";
 function setLanguage(language: Language) {
   /* ... */
 }
-const language: Language = 'JavaScript';
+const language: Language = "JavaScript";
 setLanguage(language); // OK

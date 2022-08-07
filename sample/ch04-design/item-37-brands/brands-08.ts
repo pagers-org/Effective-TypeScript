@@ -1,5 +1,5 @@
-type Meters = number & { _brand: 'meters' };
-type Seconds = number & { _brand: 'seconds' };
+type Meters = number & { _brand: "meters" };
+type Seconds = number & { _brand: "seconds" };
 
 const meters = (m: number) => m as Meters;
 const seconds = (s: number) => s as Seconds;

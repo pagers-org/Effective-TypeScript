@@ -1,1 +1,1 @@
-document.getElementById('my-div'); // HTMLElement
+document.getElementById("my-div"); // HTMLElement

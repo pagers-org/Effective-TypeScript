@@ -5,7 +5,7 @@ interface Animal {
 }
 
 const leopard: Animal = {
-  name: 'Snow Leopard',
+  name: "Snow Leopard",
   endangered: false,
-  habitat: 'tundra',
+  habitat: "tundra",
 };

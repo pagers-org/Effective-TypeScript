@@ -12,7 +12,7 @@ function logProduct(product: Product) {
   console.log(id, name, price);
 }
 const elmo: Product = {
-  name: 'Tickle Me Elmo',
-  id: '048188 627152',
+  name: "Tickle Me Elmo",
+  id: "048188 627152",
   price: 28.99,
 };

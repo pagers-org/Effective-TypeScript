@@ -1,6 +1,7 @@
 /**
  * 아래의 객체들을 동일하게 선언할 수 있는 타입을 작성해주세요.
  */
+
 type Person = {};
 
 const personA: Person = {

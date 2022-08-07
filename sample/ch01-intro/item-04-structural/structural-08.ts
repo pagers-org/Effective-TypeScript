@@ -25,5 +25,5 @@ function calculateLengthL1(v: Vector3D) {
   }
   return length;
 }
-const vec3D = { x: 3, y: 4, z: 1, address: '123 Broadway' };
+const vec3D = { x: 3, y: 4, z: 1, address: "123 Broadway" };
 calculateLengthL1(vec3D); // OK, returns NaN

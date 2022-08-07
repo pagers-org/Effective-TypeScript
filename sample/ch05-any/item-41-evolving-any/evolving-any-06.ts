@@ -5,6 +5,6 @@ try {
   val = 12;
   val; // Type is number
 } catch (e) {
-  console.warn('alas!');
+  console.warn("alas!");
 }
 val; // Type is number | null

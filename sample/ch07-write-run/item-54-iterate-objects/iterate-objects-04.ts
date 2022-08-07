@@ -1,7 +1,7 @@
 const obj = {
-  one: 'uno',
-  two: 'dos',
-  three: 'tres',
+  one: "uno",
+  two: "dos",
+  three: "tres",
 };
 for (const k in obj) {
   const v = obj[k];

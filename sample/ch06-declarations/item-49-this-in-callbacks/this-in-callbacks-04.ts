@@ -6,6 +6,6 @@ class C {
     }
   }
 }
-document.querySelector('input')!.addEventListener('change', function (e) {
+document.querySelector("input")!.addEventListener("change", function (e) {
   console.log(this); // Logs the input element on which the event fired.
 });

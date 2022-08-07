@@ -14,5 +14,5 @@ const book = safeParseYAML(`
 `) as Book;
 alert(book.title);
 // ~~~~~ Property 'title' does not exist on type 'Book'
-book('read');
+book("read");
 // ~~~~~~~~~ this expression is not callable

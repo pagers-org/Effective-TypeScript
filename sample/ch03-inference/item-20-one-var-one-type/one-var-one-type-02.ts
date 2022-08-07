@@ -1,6 +1,6 @@
 function fetchProduct(id: string) {}
 function fetchProductBySerialNumber(id: number) {}
-let id = '12-34-56';
+let id = "12-34-56";
 fetchProduct(id);
 
 id = 123456;

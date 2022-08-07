@@ -10,5 +10,5 @@ interface NamedVector {
   x: number;
   y: number;
 }
-const v: NamedVector = { x: 3, y: 4, name: 'Zee' };
+const v: NamedVector = { x: 3, y: 4, name: "Zee" };
 calculateLength(v); // OK, result is 5

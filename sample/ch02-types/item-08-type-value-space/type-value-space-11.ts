@@ -2,7 +2,7 @@ interface Person {
   first: string;
   last: string;
 }
-const p: Person = { first: 'Jane', last: 'Jacobs' };
+const p: Person = { first: "Jane", last: "Jacobs" };
 //    -           --------------------------------- Values
 //       ------ Type
 function email(p: Person, subject: string, body: string): Response {
@@ -26,6 +26,6 @@ function calculateVolume(shape: unknown) {
 }
 const v = typeof Cylinder; // Value is 'function'
 type T = typeof Cylinder; // Type is typeof Cylinder
-const first: Person['first'] = p['first']; // Or p.first
+const first: Person["first"] = p["first"]; // Or p.first
 // -----                    ---------- Values
 //        ------ ------- Types

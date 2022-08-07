@@ -1,9 +1,9 @@
 // HIDE
 export const foo = true;
 const states = [
-  { name: 'Alabama', capital: 'Montgomery' },
-  { name: 'Alaska', capital: 'Juneau' },
-  { name: 'Arizona', capital: 'Phoenix' },
+  { name: "Alabama", capital: "Montgomery" },
+  { name: "Alaska", capital: "Juneau" },
+  { name: "Arizona", capital: "Phoenix" },
   // ...
 ];
 // END

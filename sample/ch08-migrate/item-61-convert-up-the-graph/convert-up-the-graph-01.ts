@@ -2,13 +2,13 @@
 
 class Greeting {
   constructor(name) {
-    this.greeting = 'Hello';
+    this.greeting = "Hello";
     // ~~~~~~~~ Property 'greeting' does not exist on type 'Greeting'
     this.name = name;
     // ~~~~ Property 'name' does not exist on type 'Greeting'
   }
   greet() {
-    return this.greeting + ' ' + this.name;
+    return this.greeting + " " + this.name;
     // ~~~~~~~~              ~~~~ Property ... does not exist
   }
 }

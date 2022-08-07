@@ -1,1 +1,1 @@
-document.getElementById('my-div') as HTMLDivElement;
+document.getElementById("my-div") as HTMLDivElement;

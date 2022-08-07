@@ -11,5 +11,5 @@ interface IFn {
   (x: number): string;
 }
 
-const toStrT: TFn = x => '' + x; // OK
-const toStrI: IFn = x => '' + x; // OK
+const toStrT: TFn = (x) => "" + x; // OK
+const toStrI: IFn = (x) => "" + x; // OK

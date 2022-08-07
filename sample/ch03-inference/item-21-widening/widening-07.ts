@@ -3,7 +3,7 @@ interface Vector3 {
   y: number;
   z: number;
 }
-function getComponent(vector: Vector3, axis: 'x' | 'y' | 'z') {
+function getComponent(vector: Vector3, axis: "x" | "y" | "z") {
   return vector[axis];
 }
 const v: { x: 1 | 3 | 5 } = {

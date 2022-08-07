@@ -7,9 +7,9 @@ interface State {
 // END
 
 const states: State[] = [
-  { name: 'Alabama', capital: 'Montgomery' },
-  { name: 'Alaska', capitol: 'Juneau' },
+  { name: "Alabama", capital: "Montgomery" },
+  { name: "Alaska", capitol: "Juneau" },
   // ~~~~~~~~~~~~~~~~~ Did you mean to write 'capital'?
-  { name: 'Arizona', capital: 'Phoenix' },
+  { name: "Arizona", capital: "Phoenix" },
   // ...
 ];

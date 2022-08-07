@@ -6,11 +6,11 @@ interface Person {
   };
 }
 const alanT: Person = {
-  name: 'Alan Turing',
+  name: "Alan Turing",
   birth: {
     // ~~~~ Property 'date' is missing in type
     //      '{ place: string; }' but required in type
     //      '{ place: string; date: Date; }'
-    place: 'London',
+    place: "London",
   },
 };

@@ -5,7 +5,7 @@ type FillLayout = unknown;
 type LineLayout = unknown;
 type PointLayout = unknown;
 interface Layer {
-  type: 'fill' | 'line' | 'point';
+  type: "fill" | "line" | "point";
   layout: FillLayout | LineLayout | PointLayout;
   paint: FillPaint | LinePaint | PointPaint;
 }

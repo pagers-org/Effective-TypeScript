@@ -5,7 +5,7 @@ interface State {
   pageContents: string;
 }
 type TopNavState = {
-  userId: State['userId'];
-  pageTitle: State['pageTitle'];
-  recentFiles: State['recentFiles'];
+  userId: State["userId"];
+  pageTitle: State["pageTitle"];
+  recentFiles: State["recentFiles"];
 };

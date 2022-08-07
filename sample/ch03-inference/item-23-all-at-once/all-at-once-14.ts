@@ -1,5 +1,5 @@
 declare let hasMiddle: boolean;
-const firstLast = { first: 'Harry', last: 'Truman' };
+const firstLast = { first: "Harry", last: "Truman" };
 function addOptional<T extends object, U extends object>(
   a: T,
   b: U | null
@@ -7,5 +7,5 @@ function addOptional<T extends object, U extends object>(
   return { ...a, ...b };
 }
 
-const president = addOptional(firstLast, hasMiddle ? { middle: 'S' } : null);
+const president = addOptional(firstLast, hasMiddle ? { middle: "S" } : null);
 president.middle; // OK, type is string | undefined

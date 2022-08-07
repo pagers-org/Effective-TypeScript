@@ -1,5 +1,5 @@
 function isGreeting(phrase: string) {
-  return ['hello', 'good day'].includes(phrase);
+  return ["hello", "good day"].includes(phrase);
   // ~~~~~~
   // Argument of type 'String' is not assignable to parameter
   // of type 'string'.

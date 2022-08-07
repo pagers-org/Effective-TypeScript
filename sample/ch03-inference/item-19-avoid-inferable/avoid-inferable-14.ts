@@ -12,7 +12,7 @@ function logProduct(product: Product) {
   console.log(id, name, price);
 }
 const furby = {
-  name: 'Furby',
+  name: "Furby",
   id: 630509430963,
   price: 35,
 };

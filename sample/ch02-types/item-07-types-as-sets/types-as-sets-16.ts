@@ -14,8 +14,8 @@ const pts: Point[] = [
   { x: 1, y: 1 },
   { x: 2, y: 0 },
 ];
-sortBy(pts, 'x'); // OK, 'x' extends 'x'|'y' (aka keyof T)
-sortBy(pts, 'y'); // OK, 'y' extends 'x'|'y'
-sortBy(pts, Math.random() < 0.5 ? 'x' : 'y'); // OK, 'x'|'y' extends 'x'|'y'
-sortBy(pts, 'z');
+sortBy(pts, "x"); // OK, 'x' extends 'x'|'y' (aka keyof T)
+sortBy(pts, "y"); // OK, 'y' extends 'x'|'y'
+sortBy(pts, Math.random() < 0.5 ? "x" : "y"); // OK, 'x'|'y' extends 'x'|'y'
+sortBy(pts, "z");
 // ~~~ Type ''z'' is not assignable to parameter of type ''x' | 'y'

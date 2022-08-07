@@ -8,4 +8,4 @@ function add(a, b) {
 }
 
 const three = add(1, 2); // Type is number
-const twelve = add('1', '2'); // Type is string
+const twelve = add("1", "2"); // Type is string

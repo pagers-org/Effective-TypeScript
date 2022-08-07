@@ -3,4 +3,4 @@ interface Document {
   monkey: string;
 }
 
-document.monkey = 'Tamarin'; // OK
+document.monkey = "Tamarin"; // OK

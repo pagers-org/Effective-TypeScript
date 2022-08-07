@@ -5,6 +5,6 @@ interface Room {
 const obj = {
   numDoors: 1,
   ceilingHeightFt: 10,
-  elephant: 'present',
+  elephant: "present",
 };
 const r: Room = obj; // OK

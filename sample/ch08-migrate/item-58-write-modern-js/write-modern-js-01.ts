@@ -10,9 +10,9 @@ class Person {
   }
 
   getName() {
-    return this.first + ' ' + this.last;
+    return this.first + " " + this.last;
   }
 }
 
-const marie = new Person('Marie', 'Curie');
+const marie = new Person("Marie", "Curie");
 const personName = marie.getName();

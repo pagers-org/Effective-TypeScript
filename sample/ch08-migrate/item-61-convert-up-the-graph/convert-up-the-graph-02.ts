@@ -4,10 +4,10 @@ class Greeting {
   greeting: string;
   name: any;
   constructor(name) {
-    this.greeting = 'Hello';
+    this.greeting = "Hello";
     this.name = name;
   }
   greet() {
-    return this.greeting + ' ' + this.name;
+    return this.greeting + " " + this.name;
   }
 }

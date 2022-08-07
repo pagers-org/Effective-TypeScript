@@ -4,6 +4,6 @@ interface BoundingBox {
   lat: [number, number];
   lng: [number, number];
 }
-import { Feature, Geometry } from 'geojson';
+import { Feature, Geometry } from "geojson";
 declare let f: Feature;
 function helper(coordinates: any[]) {}

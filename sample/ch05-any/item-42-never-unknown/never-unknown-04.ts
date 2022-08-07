@@ -14,5 +14,5 @@ const book = safeParseYAML(`
 `);
 alert(book.title);
 // ~~~~ Object is of type 'unknown'
-book('read');
+book("read");
 // ~~~~~~~~~~ Object is of type 'unknown'

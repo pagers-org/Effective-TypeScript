@@ -6,7 +6,7 @@ interface Rectangle extends Square {
 }
 type Shape = Square | Rectangle;
 function calculateArea(shape: Shape) {
-  if ('height' in shape) {
+  if ("height" in shape) {
     shape; // Type is Rectangle
     return shape.width * shape.height;
   } else {

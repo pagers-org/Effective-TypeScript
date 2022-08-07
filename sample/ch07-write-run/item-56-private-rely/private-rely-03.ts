@@ -9,5 +9,5 @@ class PasswordChecker {
   }
 }
 
-const checker = new PasswordChecker(hash('s3cret'));
-checker.checkPassword('s3cret'); // Returns true
+const checker = new PasswordChecker(hash("s3cret"));
+checker.checkPassword("s3cret"); // Returns true

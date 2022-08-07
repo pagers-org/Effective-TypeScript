@@ -1,5 +1,5 @@
 function getElement(elOrId: string | HTMLElement | null): HTMLElement {
-  if (typeof elOrId === 'object') {
+  if (typeof elOrId === "object") {
     return elOrId;
     // ~~~~~~~~~~~~~~ 'HTMLElement | null' is not assignable to 'HTMLElement'
   } else if (elOrId === null) {

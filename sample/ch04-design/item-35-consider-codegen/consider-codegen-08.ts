@@ -1,5 +1,5 @@
 export interface getLicense_repository_licenseInfo {
-  __typename: 'License';
+  __typename: "License";
   /** Short identifier specified by <https://spdx.org/licenses> */
   spdxId: string | null;
   /** The license full name specified by <https://spdx.org/licenses> */
@@ -7,7 +7,7 @@ export interface getLicense_repository_licenseInfo {
 }
 
 export interface getLicense_repository {
-  __typename: 'Repository';
+  __typename: "Repository";
   /** The description of the repository. */
   description: string | null;
   /** The license associated with the repository */

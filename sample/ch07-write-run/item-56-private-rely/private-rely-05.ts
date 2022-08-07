@@ -3,7 +3,7 @@ class PasswordChecker {
   private password: string;
 
   constructor() {
-    this.password = 's3cret';
+    this.password = "s3cret";
   }
 
   checkPassword(password: string) {

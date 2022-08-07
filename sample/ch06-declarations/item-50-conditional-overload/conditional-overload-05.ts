@@ -5,7 +5,7 @@ function double(x: any) {
 }
 
 const num = double(12); // Type is number
-const str = double('x'); // Type is string
+const str = double("x"); // Type is string
 function f(x: number | string) {
   return double(x);
   // ~ Argument of type 'string | number' is not assignable
