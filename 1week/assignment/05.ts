@@ -16,7 +16,9 @@ type HumanProps = {
   };
 };
 
-const Bob: HumanProps = {
+// 1. Type 수준에서 제어하기
+
+const Bob: Readonly<HumanProps> = {
   firstName: 'Bob',
   surname: 'Keel',
   profile: {
@@ -28,3 +30,23 @@ const Bob: HumanProps = {
     },
   },
 };
+
+// 2. 런타임에서 제어하기
+
+const Bob2: HumanProps = {
+  firstName: 'Bob',
+  surname: 'Keel',
+  profile: {
+    rating: 'medium',
+    school: 'Harvard University',
+    education: {
+      first: 'Master',
+      second: 'Doctor',
+    },
+  },
+};
+
+Object.freeze(Bob2);
+
+Bob2.firstName = 'Steven';
+// console.log(Bob2.firstName) => Bob
