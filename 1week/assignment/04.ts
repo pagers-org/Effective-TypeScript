@@ -5,10 +5,10 @@
  * - 특정 index의 원소를 변경하는 update 메서드를 만들어주세요.
  */
 
-class List<T> {
-  private items: T[] = [];
+class List<ItemType> {
+  private items: ItemType[] = [];
 
-  add(item: T) {
+  add(item: ItemType) {
     this.items.push(item);
   }
 
@@ -16,25 +16,25 @@ class List<T> {
     return this.items[index];
   }
 
-  update(index: number, item: T) {
+  update(index: number, newItem: ItemType) {
     const isInaccessible = index < 0 || this.items.length - 1 < index;
     if (isInaccessible) {
-      throw Error('inaccessible index error');
+      throw Error("inaccessible index error");
     }
-    this.items[index] = item;
+    this.items[index] = newItem;
   }
 
-  remove(targetItem: T) {
-    const isDifferentItem = (target1: T, target2: T) => {
-      if (typeof target1 === 'object') {
-        return JSON.stringify(target1) !== JSON.stringify(target2);
+  remove(targetItem: ItemType) {
+    const isEqual = (target1: ItemType, target2: ItemType) => {
+      if (typeof target1 === "object") {
+        return JSON.stringify(target1) === JSON.stringify(target2);
       }
-      return target1 !== target2;
-    }
+      return target1 === target2;
+    };
 
-    const nextItems = this.items.filter((currentItem) => (
-      isDifferentItem(targetItem, currentItem)
-    ));
+    const nextItems = this.items.filter(
+      (currentItem) => !isEqual(targetItem, currentItem)
+    );
 
     this.items = nextItems;
   }
