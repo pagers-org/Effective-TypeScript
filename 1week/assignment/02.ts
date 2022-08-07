@@ -168,17 +168,15 @@ type BasicColorsTheme = {
   [T in keyof (typeof basicColors ) ]?: typeof basicColors[T];
 }
 
-type Theme =  Omit<BasicColorsTheme, keyof typeof palette> | {
+type Theme =  Omit<BasicColorsTheme, keyof typeof palette> & {
   [T in keyof typeof palette]?: typeof palette[T];
 }
 
 
 const YOURE_PALETTE_THEME: Theme  = {
   "cyan/aqua":"#00FFFF",
-  gray: "#808080",
-  silver:"#C0C0C0",
-  "dimGray/dimGrey":"#696969",
-  "gray/grey":"#808080",
+  "magenta/fuchsia":"#FF00FF",
+  "dimGray/dimGrey": "#696969",
 };
 
 // 1. 팔레트와 베이직 컬러에 들어있는 모든 값을 이용해서 사용할 수 있는 테마 팔레트를 만드는 문제라고 생각했습니다.
