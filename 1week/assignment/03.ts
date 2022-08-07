@@ -6,6 +6,7 @@
  * 1. userRole 자체를 string으로 만든다.
  * 2. userRole이 필요 없을 수도 있으므로 optional하게 바꾸어준다.
  */
+
 type UserInformation = {
   userId: string;
   userName: string;
