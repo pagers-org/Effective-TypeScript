@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "Node",
     "resolveJsonModule": true,
