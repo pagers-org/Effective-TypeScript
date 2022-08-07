@@ -16,7 +16,9 @@ type HumanProps = {
   };
 };
 
-const Bob: HumanProps = {
+type ReadOnlyHumanProps = Readonly<HumanProps>;
+
+const Bob: ReadOnlyHumanProps = {
   firstName: 'Bob',
   surname: 'Keel',
   profile: {
@@ -28,3 +30,7 @@ const Bob: HumanProps = {
     },
   },
 };
+
+console.log(Bob.firstName);
+
+// 참고 - https://cpro95.tistory.com/564
