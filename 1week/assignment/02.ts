@@ -163,4 +163,9 @@ const basicColors = {
   navy: '#000080',
 };
 
-const YOURE_PALETTE_THEME = {};
+const ALL_COLOR_SCHEME = { ...palette, ...basicColors };
+type AllColorScheme = typeof ALL_COLOR_SCHEME;
+
+type MyPalette = { [k in keyof AllColorScheme]: AllColorScheme[k] };
+
+const YOURE_PALETTE_THEME: MyPalette = ALL_COLOR_SCHEME;

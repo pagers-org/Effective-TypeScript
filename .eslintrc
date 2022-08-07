@@ -15,11 +15,11 @@
   "parserOptions": {
     "parser": "@typescript-eslint/parser",
     "ecmaVersion": 12,
-    "sourceType": "module",
-    "project": ["./tsconfig.json"]
+    "sourceType": "module"
   },
   "rules": {
     "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-unused-vars": 0,
     "prettier/prettier": [
       "error",
       {

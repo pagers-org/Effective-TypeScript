@@ -16,7 +16,13 @@ type HumanProps = {
   };
 };
 
-const Bob: HumanProps = {
+type DeepReadonly<T> = {
+  readonly [P in keyof T]: DeepReadonly<T[P]>;
+};
+
+type ReadOnlyHumanProps = DeepReadonly<HumanProps>;
+
+const Bob: ReadOnlyHumanProps = {
   firstName: 'Bob',
   surname: 'Keel',
   profile: {

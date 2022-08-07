@@ -19,22 +19,20 @@ class List<ItemType> {
   update(index: number, newItem: ItemType) {
     const isInaccessible = index < 0 || this.items.length - 1 < index;
     if (isInaccessible) {
-      throw Error("inaccessible index error");
+      throw Error('inaccessible index error');
     }
     this.items[index] = newItem;
   }
 
   remove(targetItem: ItemType) {
     const isEqual = (target1: ItemType, target2: ItemType) => {
-      if (typeof target1 === "object") {
+      if (typeof target1 === 'object') {
         return JSON.stringify(target1) === JSON.stringify(target2);
       }
       return target1 === target2;
     };
 
-    const nextItems = this.items.filter(
-      (currentItem) => !isEqual(targetItem, currentItem)
-    );
+    const nextItems = this.items.filter(currentItem => !isEqual(targetItem, currentItem));
 
     this.items = nextItems;
   }
