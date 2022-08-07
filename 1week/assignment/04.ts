@@ -26,6 +26,7 @@ class List<ItemType> {
 
   remove(targetItem: ItemType) {
     const isEqual = (target1: ItemType, target2: ItemType) => {
+      // object는 참조형이므로 stringfy 한 후 비교
       if (typeof target1 === 'object') {
         return JSON.stringify(target1) === JSON.stringify(target2);
       }

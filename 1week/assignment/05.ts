@@ -16,6 +16,7 @@ type HumanProps = {
   };
 };
 
+// readOnly는 얕게 동작하므로 제귀로 돌며 모든 key에 readOnly를 할당
 type DeepReadonly<T> = {
   readonly [P in keyof T]: DeepReadonly<T[P]>;
 };
