@@ -2,6 +2,7 @@
  * 당신만의 Theme를 만들도록 아래 상수를 활용하여 타입을 지정해주세요.
  * - 컬러의 값은 자동완성되어야 합니다.
  */
+// ???
 const palette = {
   maroon: '#800000',
   darkRed: '#8B0000',
@@ -163,4 +164,11 @@ const basicColors = {
   navy: '#000080',
 };
 
-const YOURE_PALETTE_THEME = {};
+// 문제의 의도를 모르겠습니다.ㅠㅠ
+const YOURE_PALETTE_THEME = {
+  red: palette.red,
+} as const;
+
+type MyThemeType = typeof YOURE_PALETTE_THEME;
+
+const a: MyThemeType = { red: YOURE_PALETTE_THEME.red };

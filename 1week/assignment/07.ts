@@ -7,8 +7,9 @@ interface Cylinder {
   height: number;
 }
 
+const isCylinder = (arg: unknown): arg is Cylinder => 'radius' in (arg as Cylinder) && 'height' in (arg as Cylinder);
 function calculateVolumne(shape: unknown) {
-  if (shape instanceof Cylinder) {
+  if (isCylinder(shape)) {
     shape.radius;
   }
 }
