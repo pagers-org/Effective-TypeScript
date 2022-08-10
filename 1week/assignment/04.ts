@@ -6,13 +6,21 @@
  */
 
 class List {
-  private items: any[] = [];
+  private items: string[] = [];
 
-  add(item: any) {
+  add(item: string) {
     this.items.push(item);
   }
 
   get(index: number) {
     return this.items[index];
+  }
+
+  remove() {
+    return this.items.pop();
+  }
+
+  update(index: number, value:string ) {
+    this.items[index] = value;
   }
 }

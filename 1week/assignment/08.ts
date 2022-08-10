@@ -35,24 +35,20 @@
   ]
  * - 함수를 리팩토링해주세요.
  */
-
 function parseTaggedText(lines: string[]): string[][] {
   const paragraphs: string[][] = [];
   const currPara: string[] = [];
 
   const addParagraph = () => {
-    if (currPara.length) {
-      paragraphs.push(currPara);
-      currPara.length = 0; // Clear the lines
-    }
+    paragraphs.push(currPara);
   };
 
   for (const line of lines) {
     if (!line) {
       addParagraph();
     } else {
-      currPara.push(`<p> ${line} </p>`);
     }
+    currPara.push(`<p> ${line} </p>`);
   }
 
   addParagraph();
