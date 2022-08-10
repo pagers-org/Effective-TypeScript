@@ -7,3 +7,7 @@ type UserInformation = {
   userRole: 'normal' | 'vip' | 'admin';
   password: string;
 };
+
+type IUserInformation = Omit<UserInformation, 'userRole'> & {userRole: string};
+
+const a: IUserInformation = { password: 'ab', userId: 'cd', userName: 'ef', userRole: 'tt' };
