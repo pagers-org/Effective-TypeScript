@@ -38,12 +38,12 @@
 
 function parseTaggedText(lines: string[]): string[][] {
   const paragraphs: string[][] = [];
-  const currPara: string[] = [];
+  let currPara: readonly string[] = [];
 
   const addParagraph = () => {
     if (currPara.length) {
-      paragraphs.push(currPara);
-      currPara.length = 0; // Clear the lines
+      paragraphs.push([...currPara]);
+      currPara = []; // Clear the lines
     }
   };
 
@@ -51,7 +51,7 @@ function parseTaggedText(lines: string[]): string[][] {
     if (!line) {
       addParagraph();
     } else {
-      currPara.push(`<p> ${line} </p>`);
+      currPara = currPara.concat([`<p> ${line} </p>`]);
     }
   }
 
