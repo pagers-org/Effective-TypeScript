@@ -144,7 +144,7 @@ const palette = {
   white: '#FFFFFF',
 } as const;
 
-const basicColors = {
+const myColors = {
   black: '#000000',
   white: '#FFFFFF',
   red: '#FF0000',
@@ -163,4 +163,15 @@ const basicColors = {
   navy: '#000080',
 };
 
-const YOURE_PALETTE_THEME = {};
+type Palette = typeof palette;
+type MyColors = typeof myColors;
+
+type MyPalette = keyof (Palette | MyColors);
+type MyPaletteTheme = {
+  [key in MyPalette]: Palette[key];
+};
+
+const YOURE_PALETTE_THEME: MyPaletteTheme = {
+  black: '#000000',
+  // ...
+};
