@@ -7,7 +7,7 @@ function prettyPrint(x: any): string {
 
   if (typeof x === 'number') return String(x);
 
-  if (Array.isArray(x)) return '[' + x.mop(prettyPrint).join(', ') + ']';
+  if (Array.isArray(x)) return '[' + x.map(prettyPrint).join(', ') + ']';  // map이 맞을듯?
 
   if (typeof x === 'object') return Object.keys(x).join(', ');
 
