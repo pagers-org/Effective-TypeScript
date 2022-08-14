@@ -15,9 +15,11 @@ class List<T> {
   get(index: number) {
     return this.items[index];
   }
+  
   remove(index: number) {
     return this.items = [...this.items].filter((_, filterIndex: number) => index !== filterIndex)
   }
+
   update(index: number, item: T) {
     return this.items[index] = item;
   }
