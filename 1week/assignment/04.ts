@@ -29,3 +29,4 @@ console.log(list.add('333'))
 console.log(list.get(2))
 console.log(list.remove(0))
 console.log(list.update(0, 'test'))
+// 참조: https://poiemaweb.com/typescript-generic
