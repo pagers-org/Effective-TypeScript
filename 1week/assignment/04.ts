@@ -15,8 +15,23 @@ class List<T> {
   get(index: number) {
     return this.items[index];
   }
+
   update(index: number, item: T) {
     this.items[index] = item;
+    return true;
+  }
+
+  removeByIndex(index: number) {
+    return this.items.filter((_, i) => i !== index);
+  }
+
+  removeByMatcherFn(target: T, matcherFn: (item: T) => unknown) {
+    // in these cases, i think using third party(for example, dequal) to diff is the best.
+    return this.items.filter((item) => matcherFn(target) !== matcherFn(item));
+  }
+
+  removeByAll() {
+    this.items.length = 0;
     return true;
   }
 }
