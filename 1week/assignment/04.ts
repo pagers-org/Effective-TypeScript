@@ -30,7 +30,7 @@ class List<T> {
     return this.items.filter((item) => matcherFn(target) !== matcherFn(item));
   }
 
-  removeByAll() {
+  removeAll() {
     this.items.length = 0;
     return true;
   }
