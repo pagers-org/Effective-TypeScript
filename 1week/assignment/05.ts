@@ -3,15 +3,15 @@
  */
 
 type HumanProps = {
-  firstName: string;
-  surname: string;
-  profile: {
-    rating: string;
-    school: string;
-    education: {
-      first: string;
-      second: string;
-      third?: string;
+  readonly firstName: string;
+  readonly surname: string;
+  readonly profile: {
+    readonly rating: string;
+    readonly school: string;
+    readonly education: {
+      readonly first: string;
+      readonly second: string;
+      readonly third?: string;
     };
   };
 };
