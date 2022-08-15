@@ -16,9 +16,13 @@ type HumanProps = {
   };
 };
 
+type DeepReadOnly<T extends object> = {
+  readonly [K in keyof T]: T[K] extends object ? DeepReadOnly<T[K]> : T[K];
+};
+
 // 1. Type 수준에서 제어하기
 
-const Bob: Readonly<HumanProps> = {
+const Bob: DeepReadOnly<HumanProps> = {
   firstName: 'Bob',
   surname: 'Keel',
   profile: {
@@ -50,3 +54,14 @@ Object.freeze(Bob2);
 
 Bob2.firstName = 'Steven';
 // console.log(Bob2.firstName) => Bob
+
+
+type Test1 = {
+  steven1: [true, false],
+  steven2: string,
+}
+
+const test1: DeepReadOnly<Test1> = {
+  steven1: [true, false],
+  steven2: "hello world"
+}
