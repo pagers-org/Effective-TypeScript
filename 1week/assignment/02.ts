@@ -144,6 +144,8 @@ const palette = {
   white: '#FFFFFF',
 } as const;
 
+
+
 const basicColors = {
   black: '#000000',
   white: '#FFFFFF',
@@ -163,4 +165,27 @@ const basicColors = {
   navy: '#000080',
 };
 
-const YOURE_PALETTE_THEME = {};
+type ValueOf<T> = T[keyof T];
+
+type PaletteTheme = {
+  [key in keyof typeof basicColors]: ValueOf<typeof palette>;
+}
+
+const YOURE_PALETTE_THEME: PaletteTheme = {
+  black: '#00008B',
+  white: '#006400',
+  red: '#FFFAF0',
+  lime: '#00FF00',
+  blue: '#0000FF',
+  yellow: '#FFFF00',
+  'cyan/aqua': '#483D8B',
+  'magenta/fuchsia': '#FF00FF',
+  silver: '#C0C0C0',
+  gray: '#808080',
+  maroon: '#800000',
+  olive: '#F0FFF0',
+  green: '#008000',
+  purple: '#FFE4E1',
+  teal:'#F0E68C',
+  navy: '#F08080',
+};
