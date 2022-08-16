@@ -161,6 +161,20 @@ const basicColors = {
   purple: '#800080',
   teal: '#008080',
   navy: '#000080',
-};
+} as const;
 
-const YOURE_PALETTE_THEME = {};
+
+type PaletteType =  typeof palette;
+type BasicColorType =  typeof basicColors;
+
+type UnionKey = keyof (PaletteType & BasicColorType);
+type NewValue = (PaletteType & BasicColorType)[UnionKey]
+
+type AnswerKey = {
+  [key in UnionKey]: (PaletteType & BasicColorType)[key]
+}
+const YOURE_PALETTE_THEME: Partial<AnswerKey> = {
+  black: '#000000',
+  red: '#FF0000',
+  gainsboro: '#DCDCDC'
+}

@@ -1,7 +1,13 @@
 /**
  * 아래의 객체들을 동일하게 선언할 수 있는 타입을 작성해주세요.
  */
-type Person = {};
+type Person = {
+  name: string | {first: number, last: string},
+  age: number | string,
+  sex: 'male' | 'female'| '남자' | '여자',
+  birth: string | Date | null,
+  death?: Date
+};
 
 const personA: Person = {
   name: 'Alan Turing',

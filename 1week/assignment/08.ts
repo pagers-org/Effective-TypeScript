@@ -1,3 +1,6 @@
+// 문제의 의도가 조금 파악하기 어려워 나름대로 풀어보았습니다.
+// 출제 의도와 맞게 풀었는지 잘 모르겠습니당 ㅎㅎ
+
 /**
  * 아래의 함수가 동작하도록 리팩토링 해주세요.
  * - 문자열 배열을 입력하면 2차원 배열로 각 아이템이 p 태그로 묶여서 나옵니다.
@@ -37,27 +40,9 @@
  */
 
 function parseTaggedText(lines: string[]): string[][] {
-  const paragraphs: string[][] = [];
-  const currPara: string[] = [];
-
-  const addParagraph = () => {
-    if (currPara.length) {
-      paragraphs.push(currPara);
-      currPara.length = 0; // Clear the lines
-    }
-  };
-
-  for (const line of lines) {
-    if (!line) {
-      addParagraph();
-    } else {
-      currPara.push(`<p> ${line} </p>`);
-    }
-  }
-
-  addParagraph();
-  return paragraphs;
+  return [[...lines.map(line => `<p>${line}</p>`)]];
 }
+
 
 const parameter = [
   '모두 잠드는 밤에',
