@@ -4,22 +4,8 @@
 
 
 class Cylinder  {
-  #radius: number;
-  #height: number;
-
-  constructor(radius:number, height:number) {
-    this.#radius = radius;
-    this.#height = height;
+  constructor(public radius:number, public height:number) {
   }
-
-  get radius () {
-    return this.#radius;
-  }
-
-  get height(){
-    return this.#height;
-  }
-
 }
 
 
