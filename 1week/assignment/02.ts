@@ -163,4 +163,12 @@ const basicColors = {
   navy: '#000080',
 };
 
-const YOURE_PALETTE_THEME = {};
+
+const YOURE_PALETTE_THEME: Partial<typeof palette> = {
+  "darkGray/darkGrey": '#A9A9A9',
+};
+
+const another: { [key in keyof typeof palette]?: typeof palette[key] } = {
+  'beige': '#F5F5DC',
+  "dimGray/dimGrey":'#696969'
+}
