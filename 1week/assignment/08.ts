@@ -42,8 +42,7 @@ function parseTaggedText(lines: string[]): string[][] {
 
   const addParagraph = () => {
     if (currPara.length) {
-      const deepCopiedPara = currPara.slice();
-      paragraphs.push(deepCopiedPara);
+      paragraphs.push([...currPara]);
       currPara.length = 0; // Clear the lines
     }
   };
@@ -53,6 +52,7 @@ function parseTaggedText(lines: string[]): string[][] {
   }
 
   addParagraph();
+  console.log('paragraphs', paragraphs);
   return paragraphs;
 }
 
