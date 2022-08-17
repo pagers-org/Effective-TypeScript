@@ -41,8 +41,9 @@ function parseTaggedText(lines: string[]): string[][] {
   const currPara: string[] = [];
 
   const addParagraph = () => {
+    
     if (currPara.length) {
-      paragraphs.push(currPara);
+      paragraphs.push([...currPara]);
       currPara.length = 0; // Clear the lines
     }
   };
