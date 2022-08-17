@@ -161,6 +161,24 @@ const basicColors = {
   purple: '#800080',
   teal: '#008080',
   navy: '#000080',
+} as const;
+
+
+type BasicColorsTheme = {
+  [T in keyof (typeof basicColors ) ]?: typeof basicColors[T];
+}
+
+type Theme =  Omit<BasicColorsTheme, keyof typeof palette> & {
+  [T in keyof typeof palette]?: typeof palette[T];
+}
+
+
+const YOURE_PALETTE_THEME: Theme  = {
+  "cyan/aqua":"#00FFFF",
+  "magenta/fuchsia":"#FF00FF",
+  "dimGray/dimGrey": "#696969",
 };
 
-const YOURE_PALETTE_THEME = {};
+// 1. 팔레트와 베이직 컬러에 들어있는 모든 값을 이용해서 사용할 수 있는 테마 팔레트를 만드는 문제라고 생각했습니다.
+// 2. 더 적은 집합인 베이직 컬러를 확장(인터섹션)을 이용해서 Theme를 만들려고 했고 이 때, Omit을 이용해서 같은 키가 있는 경우에는 팔레트에 있는 값을 참조하도록 했습니다.
+// 3. basicColors의 경우에 "cyan/aqua" 등의 값이 string으로 제대로 자동완성 되지 않아서 as const를 이용해서 readonly로 설정해 자동완성이 되도록 했습니다.

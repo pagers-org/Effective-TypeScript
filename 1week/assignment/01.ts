@@ -1,7 +1,16 @@
 /**
  * 아래의 객체들을 동일하게 선언할 수 있는 타입을 작성해주세요.
  */
-type Person = {};
+
+type DateType = string | Date | null;
+
+type Person = {
+  name: string | {first: number, last : string}
+  age : string | number;
+  sex: string;
+  birth?: DateType;
+  death?: DateType;
+};
 
 const personA: Person = {
   name: 'Alan Turing',
@@ -25,3 +34,7 @@ const personC: Person = {
   birth: null,
   death: new Date('1954/06/07'),
 };
+
+// 1. 데이터의 형태를 보고 짜맞추는게 아닌 방법은 없을까?
+// 2. personD가 약간 또 다른 형태로 나타나면 어떻게 할 것인가? 
+

@@ -36,28 +36,31 @@
  * - 함수를 리팩토링해주세요.
  */
 
-function parseTaggedText(lines: string[]): string[][] {
-  const paragraphs: string[][] = [];
-  const currPara: string[] = [];
+type ParagraphsType = `<p> ${string} </p>`;
+
+function parseTaggedText(lines: string[]): ParagraphsType[][] {
+  const paragraphs: ParagraphsType[][] = [];
+  const currPara: ParagraphsType[] = [];
 
   const addParagraph = () => {
     if (currPara.length) {
       paragraphs.push(currPara);
-      currPara.length = 0; // Clear the lines
     }
   };
 
   for (const line of lines) {
-    if (!line) {
-      addParagraph();
-    } else {
       currPara.push(`<p> ${line} </p>`);
-    }
   }
 
   addParagraph();
   return paragraphs;
 }
+
+// 1. for...of 중에서 line 이 없는 경우가 있는지 궁금했습니다.
+// 2. 동작은 하고 있지만 typescript를 이용해서 개선할 수 있는 부분이 있는지 궁금합니다.
+// 3. 리터럴을 이용하면 재밌는 타입은 가능할 것 같습니다. 
+
+
 
 const parameter = [
   '모두 잠드는 밤에',
