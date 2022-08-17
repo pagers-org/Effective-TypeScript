@@ -15,7 +15,7 @@ function shouldUpdate(oldProps: ScatterProps, newProps: ScatterProps) {
   let k: keyof ScatterProps;
   for (k in oldProps) {
     if (oldProps[k] !== newProps[k]) {
-      if (k !== 'onClick') return true;
+      if (k !== "onClick") return true;
     }
   }
   return false;

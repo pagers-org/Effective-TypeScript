@@ -1,4 +1,4 @@
-type RecordingType = 'studio' | 'live';
+type RecordingType = "studio" | "live";
 
 interface Album {
   artist: string;

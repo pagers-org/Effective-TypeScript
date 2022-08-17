@@ -9,9 +9,9 @@ async function fetchWithCache(url: string) {
   return text;
 }
 
-let requestStatus: 'loading' | 'success' | 'error';
+let requestStatus: "loading" | "success" | "error";
 async function getUser(userId: string) {
-  requestStatus = 'loading';
+  requestStatus = "loading";
   const profile = await fetchWithCache(`/user/${userId}`);
-  requestStatus = 'success';
+  requestStatus = "success";
 }

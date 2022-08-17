@@ -12,10 +12,10 @@ export function getGift(name: SecretName, gift: string): SecretSanta {
   // COMPRESS
   return {
     name: {
-      first: 'Dan',
-      last: 'Van',
+      first: "Dan",
+      last: "Van",
     },
-    gift: 'MacBook Pro',
+    gift: "MacBook Pro",
   };
   // END
 }

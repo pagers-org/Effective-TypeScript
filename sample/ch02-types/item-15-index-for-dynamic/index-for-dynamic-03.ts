@@ -4,7 +4,7 @@ interface Rocket {
   thrust_kN: number;
 }
 const falconHeavy: Rocket = {
-  name: 'Falcon Heavy',
-  variant: 'v1',
+  name: "Falcon Heavy",
+  variant: "v1",
   thrust_kN: 15_200,
 };

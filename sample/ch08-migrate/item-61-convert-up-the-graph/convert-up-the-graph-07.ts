@@ -7,4 +7,4 @@ function double(num) {
   return 2 * num;
 }
 
-double('trouble'); // OK
+double("trouble"); // OK

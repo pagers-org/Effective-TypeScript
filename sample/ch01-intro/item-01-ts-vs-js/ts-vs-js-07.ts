@@ -3,11 +3,11 @@ interface State {
   capital: string;
 }
 const states: State[] = [
-  { name: 'Alabama', capitol: 'Montgomery' },
+  { name: "Alabama", capitol: "Montgomery" },
   // ~~~~~~~~~~~~~~~~~~~~~
-  { name: 'Alaska', capitol: 'Juneau' },
+  { name: "Alaska", capitol: "Juneau" },
   // ~~~~~~~~~~~~~~~~~
-  { name: 'Arizona', capitol: 'Phoenix' },
+  { name: "Arizona", capitol: "Phoenix" },
   // ~~~~~~~~~~~~~~~~~~ Object literal may only specify known
   //         properties, but 'capitol' does not exist in type
   //         'State'.  Did you mean to write 'capital'?

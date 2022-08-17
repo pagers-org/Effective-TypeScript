@@ -7,7 +7,7 @@ class Greeter {
   }
   @logged
   greet() {
-    return 'Hello, ' + this.greeting;
+    return "Hello, " + this.greeting;
   }
 }
 
@@ -19,7 +19,7 @@ function logged(target: any, name: string, descriptor: PropertyDescriptor) {
   };
 }
 
-console.log(new Greeter('Dave').greet());
+console.log(new Greeter("Dave").greet());
 // Logs:
 // Calling greet
 // Hello, Dave

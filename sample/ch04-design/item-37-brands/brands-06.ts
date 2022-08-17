@@ -1,4 +1,4 @@
-type SortedList<T> = T[] & { _brand: 'sorted' };
+type SortedList<T> = T[] & { _brand: "sorted" };
 
 function isSorted<T>(xs: T[]): xs is SortedList<T> {
   for (let i = 1; i < xs.length; i++) {

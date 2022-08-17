@@ -1,5 +1,5 @@
 function isInputElement(el: HTMLElement): el is HTMLInputElement {
-  return 'value' in el;
+  return "value" in el;
 }
 
 function getElementContent(el: HTMLElement) {

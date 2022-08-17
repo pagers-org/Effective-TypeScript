@@ -10,7 +10,7 @@ interface Camera {
   bearing: number;
   pitch: number;
 }
-interface CameraOptions extends Omit<Partial<Camera>, 'center'> {
+interface CameraOptions extends Omit<Partial<Camera>, "center"> {
   center?: LngLatLike;
 }
 type LngLatBounds =

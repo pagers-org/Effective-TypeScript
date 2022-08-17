@@ -7,10 +7,10 @@ interface IState {
   capital: string;
 }
 class StateT implements TState {
-  name = '';
-  capital = '';
+  name = "";
+  capital = "";
 }
 class StateI implements IState {
-  name = '';
-  capital = '';
+  name = "";
+  capital = "";
 }

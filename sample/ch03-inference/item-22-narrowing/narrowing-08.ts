@@ -1,20 +1,20 @@
 interface UploadEvent {
-  type: 'upload';
+  type: "upload";
   filename: string;
   contents: string;
 }
 interface DownloadEvent {
-  type: 'download';
+  type: "download";
   filename: string;
 }
 type AppEvent = UploadEvent | DownloadEvent;
 
 function handleEvent(e: AppEvent) {
   switch (e.type) {
-    case 'download':
+    case "download":
       e; // Type is DownloadEvent
       break;
-    case 'upload':
+    case "upload":
       e; // Type is UploadEvent
       break;
   }

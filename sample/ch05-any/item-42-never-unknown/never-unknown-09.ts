@@ -11,7 +11,7 @@ function safeParseYAML(yaml: string): unknown {
 interface Geometry {}
 function isBook(val: unknown): val is Book {
   return (
-    typeof val === 'object' && val !== null && 'name' in val && 'author' in val
+    typeof val === "object" && val !== null && "name" in val && "author" in val
   );
 }
 function processValue(val: unknown) {

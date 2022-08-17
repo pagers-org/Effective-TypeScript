@@ -7,8 +7,17 @@ interface Cylinder {
   height: number;
 }
 
+function isCylinder(value: unknown): value is Cylinder {
+  return (
+    typeof value === 'object' &&
+    value !== null &&
+    'radius' in value &&
+    'height' in value
+  );
+}
+
 function calculateVolumne(shape: unknown) {
-  if (shape instanceof Cylinder) {
+  if (isCylinder(shape)) {
     shape.radius;
   }
 }

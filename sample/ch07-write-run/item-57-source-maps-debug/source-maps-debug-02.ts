@@ -1,9 +1,9 @@
 function addCounter(el: HTMLElement) {
   let clickCount = 0;
-  const triviaEl = document.createElement('p');
-  const button = document.createElement('button');
-  button.textContent = 'Click me';
-  button.addEventListener('click', async () => {
+  const triviaEl = document.createElement("p");
+  const button = document.createElement("button");
+  button.textContent = "Click me";
+  button.addEventListener("click", async () => {
     clickCount++;
     const response = await fetch(`http://numbersapi.com/${clickCount}`);
     const trivia = await response.text();

@@ -5,5 +5,5 @@ interface State {
   pageContents: string;
 }
 type TopNavState = {
-  [k in 'userId' | 'pageTitle' | 'recentFiles']: State[k];
+  [k in "userId" | "pageTitle" | "recentFiles"]: State[k];
 };

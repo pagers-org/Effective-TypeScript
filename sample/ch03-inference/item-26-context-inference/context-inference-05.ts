@@ -1,4 +1,4 @@
-type Language = 'JavaScript' | 'TypeScript' | 'Python';
+type Language = "JavaScript" | "TypeScript" | "Python";
 function setLanguage(language: Language) {
   /* ... */
 }

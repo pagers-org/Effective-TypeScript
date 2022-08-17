@@ -163,4 +163,12 @@ const basicColors = {
   navy: '#000080',
 };
 
-const YOURE_PALETTE_THEME = {};
+const YOURE_PALETTE_THEME = {
+  ...basicColors,
+  ...palette,
+};
+
+// OR Object.assign(Object.create(null), basicColors, palette);
+// If I don't want to this object to inherit Every prototype method from Object constructor
+
+type Theme = typeof YOURE_PALETTE_THEME;

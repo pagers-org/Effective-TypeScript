@@ -4,7 +4,7 @@ interface BoundingBox {
   lat: [number, number];
   lng: [number, number];
 }
-import { Feature } from 'geojson';
+import { Feature } from "geojson";
 
 function calculateBoundingBox(f: Feature): BoundingBox | null {
   let box: BoundingBox | null = null;

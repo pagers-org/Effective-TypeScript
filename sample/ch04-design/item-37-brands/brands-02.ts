@@ -1,10 +1,10 @@
 interface Vector2D {
-  _brand: '2d';
+  _brand: "2d";
   x: number;
   y: number;
 }
 function vec2D(x: number, y: number): Vector2D {
-  return { x, y, _brand: '2d' };
+  return { x, y, _brand: "2d" };
 }
 function calculateNorm(p: Vector2D) {
   return Math.sqrt(p.x * p.x + p.y * p.y); // Same as before

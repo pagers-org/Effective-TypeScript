@@ -36,13 +36,15 @@
  * - 함수를 리팩토링해주세요.
  */
 
+// The problem is that we clear array's length which shares reference with paragraphs' elements
+
 function parseTaggedText(lines: string[]): string[][] {
   const paragraphs: string[][] = [];
   const currPara: string[] = [];
 
   const addParagraph = () => {
     if (currPara.length) {
-      paragraphs.push(currPara);
+      paragraphs.push(currPara.slice());
       currPara.length = 0; // Clear the lines
     }
   };
@@ -91,3 +93,6 @@ const parameter = [
 ];
 
 console.log(parseTaggedText(parameter));
+
+const parameter2 = ['steven', '', 'steven2', '', 'steven3'];
+console.log(parseTaggedText(parameter2));

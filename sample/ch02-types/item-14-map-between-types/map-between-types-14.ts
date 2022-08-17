@@ -1,10 +1,10 @@
 interface SaveAction {
-  type: 'save';
+  type: "save";
   // ...
 }
 interface LoadAction {
-  type: 'load';
+  type: "load";
   // ...
 }
 type Action = SaveAction | LoadAction;
-type ActionType = Action['type']; // Type is 'save' | 'load'
+type ActionType = Action["type"]; // Type is 'save' | 'load'

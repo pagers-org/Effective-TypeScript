@@ -5,17 +5,17 @@ type FillLayout = unknown;
 type LineLayout = unknown;
 type PointLayout = unknown;
 interface FillLayer {
-  type: 'fill';
+  type: "fill";
   layout: FillLayout;
   paint: FillPaint;
 }
 interface LineLayer {
-  type: 'line';
+  type: "line";
   layout: LineLayout;
   paint: LinePaint;
 }
 interface PointLayer {
-  type: 'paint';
+  type: "paint";
   layout: PointLayout;
   paint: PointPaint;
 }

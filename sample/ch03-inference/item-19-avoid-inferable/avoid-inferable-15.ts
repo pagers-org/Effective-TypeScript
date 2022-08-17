@@ -12,7 +12,7 @@ function logProduct(product: Product) {
   console.log(id, name, price);
 }
 const furby: Product = {
-  name: 'Furby',
+  name: "Furby",
   id: 630509430963,
   // ~~ Type 'number' is not assignable to type 'string'
   price: 35,

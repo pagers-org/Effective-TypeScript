@@ -3,9 +3,9 @@ interface Vector3 {
   y: number;
   z: number;
 }
-function getComponent(vector: Vector3, axis: 'x' | 'y' | 'z') {
+function getComponent(vector: Vector3, axis: "x" | "y" | "z") {
   return vector[axis];
 }
-const x = 'x'; // type is 'x'
+const x = "x"; // type is 'x'
 const vec = { x: 10, y: 20, z: 30 };
 getComponent(vec, x); // OK

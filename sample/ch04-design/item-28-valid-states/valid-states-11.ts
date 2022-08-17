@@ -1,12 +1,12 @@
 interface RequestPending {
-  state: 'pending';
+  state: "pending";
 }
 interface RequestError {
-  state: 'error';
+  state: "error";
   error: string;
 }
 interface RequestSuccess {
-  state: 'ok';
+  state: "ok";
   pageText: string;
 }
 type RequestState = RequestPending | RequestError | RequestSuccess;
@@ -16,7 +16,7 @@ interface State {
   requests: { [page: string]: RequestState };
 }
 function getUrlForPage(p: string) {
-  return '';
+  return "";
 }
 interface CockpitControls {
   /** Angle of the left side stick in degrees, 0 = neutral, + = forward */

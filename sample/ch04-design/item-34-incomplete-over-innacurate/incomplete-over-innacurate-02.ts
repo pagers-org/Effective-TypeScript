@@ -1,6 +1,6 @@
 type GeoPosition = [number, number];
 interface Point {
-  type: 'Point';
+  type: "Point";
   coordinates: GeoPosition;
 }
 // Etc.

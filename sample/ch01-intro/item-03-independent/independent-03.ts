@@ -1,16 +1,16 @@
 interface Square {
-  kind: 'square';
+  kind: "square";
   width: number;
 }
 interface Rectangle {
-  kind: 'rectangle';
+  kind: "rectangle";
   height: number;
   width: number;
 }
 type Shape = Square | Rectangle;
 
 function calculateArea(shape: Shape) {
-  if (shape.kind === 'rectangle') {
+  if (shape.kind === "rectangle") {
     shape; // Type is Rectangle
     return shape.width * shape.height;
   } else {

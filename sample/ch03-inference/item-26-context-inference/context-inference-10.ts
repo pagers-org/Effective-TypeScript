@@ -1,4 +1,4 @@
-type Language = 'JavaScript' | 'TypeScript' | 'Python';
+type Language = "JavaScript" | "TypeScript" | "Python";
 interface GovernedLanguage {
   language: Language;
   organization: string;
@@ -8,11 +8,11 @@ function complain(language: GovernedLanguage) {
   /* ... */
 }
 
-complain({ language: 'TypeScript', organization: 'Microsoft' }); // OK
+complain({ language: "TypeScript", organization: "Microsoft" }); // OK
 
 const ts = {
-  language: 'TypeScript',
-  organization: 'Microsoft',
+  language: "TypeScript",
+  organization: "Microsoft",
 };
 complain(ts);
 //       ~~ Argument of type '{ language: string; organization: string; }'

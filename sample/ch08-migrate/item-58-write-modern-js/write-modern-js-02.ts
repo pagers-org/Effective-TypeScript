@@ -1,6 +1,6 @@
 function foo() {
   bar();
   function bar() {
-    console.log('hello');
+    console.log("hello");
   }
 }

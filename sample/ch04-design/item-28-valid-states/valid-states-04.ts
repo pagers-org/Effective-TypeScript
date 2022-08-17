@@ -5,5 +5,5 @@ interface State {
 }
 declare let currentPage: string;
 function getUrlForPage(p: string) {
-  return '';
+  return "";
 }

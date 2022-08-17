@@ -11,7 +11,7 @@ function getQuote(ticker: string) {
     });
 }
 function considerBuying(x: any) {}
-getQuote('MSFT').then(considerBuying);
+getQuote("MSFT").then(considerBuying);
 // ~~~~ Property 'then' does not exist on type
 //        'number | Promise<any>'
 //      Property 'then' does not exist on type 'number'

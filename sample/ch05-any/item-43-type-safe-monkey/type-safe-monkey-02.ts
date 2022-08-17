@@ -1,1 +1,1 @@
-(document as any).monkey = 'Tamarin'; // OK
+(document as any).monkey = "Tamarin"; // OK

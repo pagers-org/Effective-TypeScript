@@ -2,7 +2,7 @@ function setLanguage(language: string) {
   /* ... */
 }
 
-setLanguage('JavaScript'); // OK
+setLanguage("JavaScript"); // OK
 
-const language = 'JavaScript';
+const language = "JavaScript";
 setLanguage(language); // OK

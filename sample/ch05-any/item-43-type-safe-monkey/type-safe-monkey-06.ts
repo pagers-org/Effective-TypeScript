@@ -3,4 +3,4 @@ interface MonkeyDocument extends Document {
   monkey: string;
 }
 
-(document as MonkeyDocument).monkey = 'Macaque';
+(document as MonkeyDocument).monkey = "Macaque";

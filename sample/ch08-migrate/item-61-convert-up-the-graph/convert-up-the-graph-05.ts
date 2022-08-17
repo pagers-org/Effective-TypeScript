@@ -5,5 +5,5 @@ interface State {
   capital: string;
 }
 const state = {} as State;
-state.name = 'New York'; // OK
-state.capital = 'Albany'; // OK
+state.name = "New York"; // OK
+state.capital = "Albany"; // OK

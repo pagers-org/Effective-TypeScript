@@ -5,7 +5,7 @@ interface State {
 }
 declare let currentPage: string;
 function getUrlForPage(p: string) {
-  return '';
+  return "";
 }
 async function changePage(state: State, newPage: string) {
   state.isLoading = true;
@@ -18,6 +18,6 @@ async function changePage(state: State, newPage: string) {
     state.isLoading = false;
     state.pageText = text;
   } catch (e) {
-    state.error = '' + e;
+    state.error = "" + e;
   }
 }

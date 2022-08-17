@@ -2,9 +2,9 @@
 function fetchURL(url: string, cb: (response: string) => void) {
   cb(url);
 }
-const url1 = '1';
-const url2 = '2';
-const url3 = '3';
+const url1 = "1";
+const url2 = "2";
+const url3 = "3";
 // END
 fetchURL(url1, function (response1) {
   fetchURL(url2, function (response2) {
@@ -25,7 +25,7 @@ console.log(4);
 // 1
 function timeout(millis: number): Promise<never> {
   return new Promise((resolve, reject) => {
-    setTimeout(() => reject('timeout'), millis);
+    setTimeout(() => reject("timeout"), millis);
   });
 }
 

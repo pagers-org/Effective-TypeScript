@@ -16,7 +16,7 @@ interface ScatterProps {
   onDoubleClick: () => void;
 }
 const PROPS_REQUIRING_UPDATE: (keyof ScatterProps)[] = [
-  'xs',
-  'ys',
+  "xs",
+  "ys",
   // ...
 ];

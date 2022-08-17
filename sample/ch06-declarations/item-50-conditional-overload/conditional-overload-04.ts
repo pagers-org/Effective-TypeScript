@@ -5,4 +5,4 @@ function double(x: any) {
 }
 
 const num = double(12); // Type is number
-const str = double('x'); // Type is string
+const str = double("x"); // Type is string

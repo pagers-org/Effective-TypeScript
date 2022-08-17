@@ -17,7 +17,7 @@
       "~/*": ["*"],
       "@/*": ["src/*"]
     },
-    "typeRoots": ["@types/"],
+    "typeRoots": ["@types/"]
   },
   "exclude": ["node_modules", "sample"]
 }

@@ -1,4 +1,4 @@
-type RecordingType = 'studio' | 'live';
+type RecordingType = "studio" | "live";
 
 interface Album {
   artist: string;
@@ -7,5 +7,5 @@ interface Album {
   recordingType: RecordingType;
 }
 function pluck<T>(record: T[], key: keyof T) {
-  return record.map(r => r[key]);
+  return record.map((r) => r[key]);
 }

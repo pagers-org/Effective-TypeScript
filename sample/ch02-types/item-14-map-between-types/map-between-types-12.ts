@@ -4,4 +4,4 @@ interface State {
   recentFiles: string[];
   pageContents: string;
 }
-type TopNavState = Pick<State, 'userId' | 'pageTitle' | 'recentFiles'>;
+type TopNavState = Pick<State, "userId" | "pageTitle" | "recentFiles">;
