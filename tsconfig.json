@@ -18,6 +18,7 @@
       "@/*": ["src/*"]
     },
     "typeRoots": ["@types/"],
+    "noImplicitAny": true
   },
   "exclude": ["node_modules", "sample"]
 }
