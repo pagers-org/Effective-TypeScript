@@ -17,16 +17,10 @@ class List<T> {
   }
 
   remove(index:number){
-    const front = this.items.slice(0, index);
-    const back = this.items.slice(index + 1);
-
-    this.items = [...front, ...back];
+    this.items = this.items.filter((item,idx)=> idx !== index);
   }
 
   update(index:number, newItem:T){
-    const front = this.items.slice(0, index);
-    const back = this.items.slice(index + 1);
-
-    this.items = [...front, newItem,...back]
+    this.items = this.items.map((item, idx)=> idx === index ? newItem : item)
   }
 }
