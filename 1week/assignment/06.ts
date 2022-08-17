@@ -7,17 +7,17 @@ type SavingAction = {
   payload: string[];
 };
 
-const savingAction: SavingAction = {
-  type: 'saving',
-  payload: ['Apple', 'Banana', 'Strawberry'],
-};
-
 type SavedAction = {
   type: 'saved';
 };
 
-const savedAction: SavedAction = {
-  type: 'saved',
+type Actions = SavingAction | SavedAction;
+
+const savingAction: Actions = {
+  type: 'saving',
+  payload: ['Apple', 'Banana', 'Strawberry'],
 };
 
-type Actions = SavingAction | SavedAction;
+const savedAction: Actions = {
+  type: 'saved',
+};

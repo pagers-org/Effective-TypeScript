@@ -2,21 +2,21 @@
  * 아래의 객체를 변경 불가능하게 만들어주세요.
  */
 
-type HumanProps = {
+type ReadonlyHumanProps = Readonly<{
   firstName: string;
   surname: string;
-  profile: {
+  profile: Readonly<{
     rating: string;
     school: string;
-    education: {
+    education: Readonly<{
       first: string;
       second: string;
       third?: string;
-    };
-  };
-};
+    }>;
+  }>;
+}>;
 
-const Bob: HumanProps = {
+const Bob: ReadonlyHumanProps = {
   firstName: 'Bob',
   surname: 'Keel',
   profile: {

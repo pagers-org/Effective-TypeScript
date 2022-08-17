@@ -161,6 +161,14 @@ const basicColors = {
   purple: '#800080',
   teal: '#008080',
   navy: '#000080',
-};
+} as const;
 
-const YOURE_PALETTE_THEME = {};
+type PalletteTheme = typeof basicColors & typeof palette;
+
+const YOUR_PALETTE_THEME: Partial<PalletteTheme> = {
+  black: '#000000',
+  olive: '#808000',
+  gainsboro: '#DCDCDC',
+  "magenta/fuchsia": '#FF00FF',
+  'cyan/aqua': '#00FFFF',
+};
