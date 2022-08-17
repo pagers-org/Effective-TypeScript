@@ -36,14 +36,14 @@
  * - 함수를 리팩토링해주세요.
  */
 
-function parseTaggedText(lines: string[]): string[][] {
-  const paragraphs: string[][] = [];
-  const currPara: string[] = [];
+function parseTaggedText(lines: string[]): (readonly string[])[] {
+  const paragraphs: (readonly string[])[] = [];
+  let currPara: readonly string[] = [];
 
   const addParagraph = () => {
     if (currPara.length) {
       paragraphs.push(currPara);
-      currPara.length = 0; // Clear the lines
+      currPara = [];
     }
   };
 
@@ -51,7 +51,7 @@ function parseTaggedText(lines: string[]): string[][] {
     if (!line) {
       addParagraph();
     } else {
-      currPara.push(`<p> ${line} </p>`);
+      currPara = currPara.concat(`<p> ${line} </p>`);
     }
   }
 

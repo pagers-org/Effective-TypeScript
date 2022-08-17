@@ -3,9 +3,9 @@
  */
 
 type HumanProps = {
-  firstName: string;
-  surname: string;
-  profile: {
+  readonly firstName: string;
+  readonly surname: string;
+  readonly profile: {
     rating: string;
     school: string;
     education: {

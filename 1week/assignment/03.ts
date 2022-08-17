@@ -4,6 +4,8 @@
 type UserInformation = {
   userId: string;
   userName: string;
-  userRole: 'normal' | 'vip' | 'admin';
+  userRole: UserRole;
   password: string;
 };
+
+type UserRole = 'normal' | 'vip' | 'admin';

@@ -7,8 +7,17 @@ interface Cylinder {
   height: number;
 }
 
-function calculateVolumne(shape: unknown) {
-  if (shape instanceof Cylinder) {
-    shape.radius;
+class Cylinder implements Cylinder {
+  constructor(radius: number, height: number){
+    this.height = height;
+    this.radius = radius;
   }
 }
+
+function calculateVolume(shape: unknown) {
+  if (shape instanceof Cylinder) {
+    console.log(shape.radius);
+  }
+}
+const cylinder = new Cylinder(1,3);
+calculateVolume(cylinder)
