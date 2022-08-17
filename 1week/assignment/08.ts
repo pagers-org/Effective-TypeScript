@@ -52,7 +52,6 @@ function parseTaggedText(lines: string[]): string[][] {
   }
 
   addParagraph();
-  console.log('paragraphs', paragraphs);
   return paragraphs;
 }
 

@@ -7,7 +7,7 @@ const savingAction = {
   payload: ['Apple', 'Banana', 'Strawberry'],
 };
 
-const savedAction ={
+const savedAction = {
   type: 'saved',
 };
 
