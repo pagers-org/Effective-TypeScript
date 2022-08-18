@@ -7,12 +7,16 @@ interface Cylinder {
   height: number;
 }
 
-class Cylinder implements Cylinder {
+
+// 값과 타입이 공존하는 class로 바꾸는게 best
+
+class Cylinder {
   constructor(radius: number, height: number){
     this.height = height;
     this.radius = radius;
   }
 }
+
 
 function calculateVolume(shape: unknown) {
   if (shape instanceof Cylinder) {

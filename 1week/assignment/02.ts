@@ -163,7 +163,7 @@ const basicColors = {
   navy: '#000080',
 };
 
-
+// union type * intersection ?
 const YOURE_PALETTE_THEME: Partial<typeof palette & typeof basicColors> = {
   black: '#000000',
   maroon: '#800000',

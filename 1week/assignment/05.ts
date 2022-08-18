@@ -3,9 +3,9 @@
  */
 
 type HumanProps = {
-  readonly firstName: string;
-  readonly surname: string;
-  readonly profile: {
+   firstName: string;
+   surname: string;
+   profile: {
     rating: string;
     school: string;
     education: {
@@ -13,10 +13,13 @@ type HumanProps = {
       second: string;
       third?: string;
     };
-  };
-};
+  } 
+}
 
-const Bob: HumanProps = {
+// => 인덱스 시그니처 만으로 readonly를 만들수있다는 취지
+// deep readonly - option1. 외부 library / 2. as const
+
+const Bob = {
   firstName: 'Bob',
   surname: 'Keel',
   profile: {
@@ -27,4 +30,4 @@ const Bob: HumanProps = {
       second: 'Doctor',
     },
   },
-};
+} as const;
