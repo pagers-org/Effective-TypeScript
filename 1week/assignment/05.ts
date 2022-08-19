@@ -16,7 +16,7 @@ type HumanProps = {
   };
 };
 
-const Bob: HumanProps = {
+const Bob: Readonly<HumanProps> = {
   firstName: 'Bob',
   surname: 'Keel',
   profile: {

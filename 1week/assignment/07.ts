@@ -7,8 +7,6 @@ interface Cylinder {
   height: number;
 }
 
-function calculateVolumne(shape: unknown) {
-  if (shape instanceof Cylinder) {
-    shape.radius;
-  }
+function calculateVolumne(shape: Cylinder) {
+  shape.radius;
 }
