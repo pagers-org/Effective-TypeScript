@@ -35,7 +35,7 @@
   ]
  * - 함수를 리팩토링해주세요.
  */
-
+/*
 function parseTaggedText(lines: string[]): string[][] {
   const paragraphs: string[][] = [];
   const currPara: string[] = [];
@@ -57,6 +57,16 @@ function parseTaggedText(lines: string[]): string[][] {
 
   addParagraph();
   return paragraphs;
+}
+*/
+function parseTaggedText(lines: string[]): string[][] {
+  const paragraphs: string[][] = [];
+  const currPara: string[] = [];  
+  for (let item of lines){
+    currPara.push(`<p> ${item} </p>`)
+  }
+  paragraphs.push(currPara)
+  return paragraphs
 }
 
 const parameter = [
