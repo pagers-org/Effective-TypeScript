@@ -170,6 +170,7 @@ type MyPalette = {
   black: string;
 };
 
+
 const YOUR_PALETTE_THEME: MyPalette = {
   purple: palette.purple,
   silver: palette.silver,

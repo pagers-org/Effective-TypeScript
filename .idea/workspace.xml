@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="74d6e22e-ba09-425d-b382-99db67f3201c" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1week/assignment/02.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/02.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1week/assignment/04.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/04.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1week/assignment/05.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/05.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1week/assignment/06.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/06.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1week/assignment/07.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/07.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1week/assignment/08.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/08.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1week/assignment/09.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/09.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1week/assignment/10.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/10.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +24,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2D1Pvwyi3fecsbIASO519lsUMNi" />
   <component name="ProjectViewState">
@@ -32,7 +39,8 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "/Users/kyw/WebstormProjects/Effective-TypeScript/node_modules/typescript/lib",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Language Defaults",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -68,7 +76,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/1week/assignment/02.ts</url>
           <line>163</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

@@ -5,17 +5,10 @@
  * - 특정 index의 원소를 변경하는 update 메서드를 만들어주세요.
  */
 
-interface IList {
-  add: (item: string) => void;
-  get: (index: number) => void;
-  remove: (index: number) => void;
-  update: (index: number, item: string) => void;
-}
+class List<T> {
+  private items: T[] = [];
 
-class List implements IList {
-  private items: string[] = [];
-
-  add(item: string) {
+  add(item: T) {
     this.items.push(item);
   }
 

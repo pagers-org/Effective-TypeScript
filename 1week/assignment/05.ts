@@ -2,23 +2,7 @@
  * 아래의 객체를 변경 불가능하게 만들어주세요.
  */
 
-type HumanProps = {
-  firstName: string;
-  surname: string;
-  profile: {
-    rating: string;
-    school: string;
-    education: {
-      first: string;
-      second: string;
-      third?: string;
-    };
-  };
-};
-
-type ReadOnlyHumanProps = Readonly<HumanProps>;
-
-const Bob: ReadOnlyHumanProps = {
+const Bob = {
   firstName: 'Bob',
   surname: 'Keel',
   profile: {
@@ -29,7 +13,7 @@ const Bob: ReadOnlyHumanProps = {
       second: 'Doctor',
     },
   },
-};
+} as const
 
 console.log(Bob.firstName);
 
