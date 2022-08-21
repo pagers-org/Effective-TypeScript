@@ -7,8 +7,9 @@ interface Person {
 }
 
 const isKorean = (person: Person) => {
-  if (person.language) {
-    if (person.language.includes('ko')) return true;
+  const {language} = person;
+  if (language) {
+    if (language.includes('ko')) return true;
   }
   return false;
 };
