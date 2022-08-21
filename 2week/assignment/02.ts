@@ -5,14 +5,16 @@ interface Toy {
   price: number;
 }
 
-const tickle = {
+const tickle: Toy = {
   name: 'Tickle',
   id: '1100',
   price: 140,
 };
 
-const showToy = (toy: Toy) => {
+const showToy = (toy: Toy): string => {
   return toy.name;
 };
 
 showToy(tickle);
+
+// 객체 리터럴 정의시 타입을 명시하여 변수가 할당되는 시점에 오류가 표시되도록 함

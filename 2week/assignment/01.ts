@@ -5,9 +5,11 @@ interface Person {
   country: string;
 }
 
-const person: Person = {
+const person = {
   name: 'Joe',
   age: 10,
   country: 'ko',
   sex: 'male',
 };
+
+// 타입 명시를 제거하여 추론하도록 함

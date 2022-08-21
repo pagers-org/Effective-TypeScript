@@ -1,7 +1,8 @@
 // 4. 다음은 잘못된 타입 좁히기의 예시입니다. 올바르게 고쳐주세요.
 function print(strs: string | string[] | null) {
   if (strs) {
-    if (typeof strs === 'object') {
+    if (Array.isArray(strs)) {
+      console.log(strs)
       for (const s of strs) {
         console.log(s);
       }
@@ -10,3 +11,5 @@ function print(strs: string | string[] | null) {
     }
   }
 }
+
+// null은 object이므로 배열타입을 확인하는 메소드로 변경

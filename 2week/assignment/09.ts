@@ -11,9 +11,19 @@ const order = (menu: Menu) => {
   return `I ordered ${menu.coffee} and ${menu.bread}`;
 };
 
-const myOrder = {
+
+// 1번째 타입 선언
+const myOrder1: Menu = {
   coffee: 'latte',
   bread: 'toast',
 };
 
-order(myOrder);
+// 2번째 타입 단언
+const myOrder2 = {
+  coffee: 'latte',
+  bread: 'toast',
+} as const;
+
+
+order(myOrder1);
+console.log(order(myOrder2))

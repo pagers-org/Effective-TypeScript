@@ -5,8 +5,9 @@ type Bird = { fly: () => void };
 declare function getSmallPet(): Fish | Bird;
 
 // fish인지 판별 할 커스텀 함수를 작성해주세요.
-function isFish(pet) {}
-
+function isFish(pet: Fish | Bird): pet is Fish {
+  return (pet as Fish).swim !== undefined
+}
 const pet = getSmallPet();
 
 const move = (pet: Fish | Bird) => {
@@ -16,3 +17,7 @@ const move = (pet: Fish | Bird) => {
     pet.fly();
   }
 };
+
+console.log(isFish({'swim': null}))
+
+// 사용자 정의 타입 가드 만들기
