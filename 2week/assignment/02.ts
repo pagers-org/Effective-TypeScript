@@ -1,7 +1,7 @@
 // 2. 타입구문을 명확하게 지정해주세요.
 interface Toy {
   name: string;
-  id: number;
+  id: number | string;
   price: number;
 }
 
@@ -12,7 +12,8 @@ const tickle = {
 };
 
 const showToy = (toy: Toy) => {
-  return toy.name;
+  const {name} = toy;
+  return name;
 };
 
 showToy(tickle);
