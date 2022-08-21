@@ -5,7 +5,7 @@ interface Toy {
   price: number;
 }
 
-const tickle = {
+const tickle :Toy = {
   name: 'Tickle',
   id: '1100',
   price: 140,
