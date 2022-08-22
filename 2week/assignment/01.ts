@@ -3,6 +3,7 @@ interface Person {
   name: string;
   age: number;
   country: string;
+  sex: string
 }
 
 const person: Person = {
@@ -11,3 +12,5 @@ const person: Person = {
   country: 'ko',
   sex: 'male',
 };
+
+export {}
