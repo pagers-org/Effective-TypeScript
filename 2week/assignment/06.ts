@@ -10,14 +10,6 @@
   
   const isKorean = (person: Person) => {
     const {language} = person;
-    const {age} = person;
-
-    if(typeof person.age === "number"){
-      return false;
-    }
-
-    console.log(age)
-
 
     if (language) {
       if (language.includes('ko')) return true;
