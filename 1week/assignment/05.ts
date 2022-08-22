@@ -16,15 +16,17 @@ type HumanProps = {
   };
 };
 
-const Bob: HumanProps = {
-  firstName: 'Bob',
-  surname: 'Keel',
+const Bob: Readonly<HumanProps> = {
+  firstName: "Bob",
+  surname: "Keel",
   profile: {
-    rating: 'medium',
-    school: 'Harvard University',
+    rating: "medium",
+    school: "Harvard University",
     education: {
-      first: 'Master',
-      second: 'Doctor',
+      first: "Master",
+      second: "Doctor",
     },
   },
 };
+
+export {};

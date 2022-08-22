@@ -7,8 +7,14 @@ interface Cylinder {
   height: number;
 }
 
+class Cylinder {
+  constructor(public radius: number, public height: number) {}
+}
+
 function calculateVolumne(shape: unknown) {
   if (shape instanceof Cylinder) {
     shape.radius;
   }
 }
+
+export {}
