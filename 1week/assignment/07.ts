@@ -7,8 +7,12 @@ interface Cylinder {
   height: number;
 }
 
+function isCylinder(arg: any): arg is Cylinder {
+  return arg.radius !== undefined && arg.height !== undefined;
+}
+
 function calculateVolumne(shape: unknown) {
-  if (shape instanceof Cylinder) {
+  if (isCylinder(shape)) {
     shape.radius;
   }
 }
