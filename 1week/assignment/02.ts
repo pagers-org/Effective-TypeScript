@@ -161,6 +161,12 @@ const basicColors = {
   purple: '#800080',
   teal: '#008080',
   navy: '#000080',
-};
+} as const;
 
-const YOURE_PALETTE_THEME = {};
+type PaletteType = typeof palette;
+type BasicColorsType = typeof basicColors;
+
+const YOURE_PALETTE_THEME: PaletteType & BasicColorsType = {
+  ...palette,
+  ...basicColors
+};
