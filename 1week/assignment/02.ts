@@ -163,4 +163,7 @@ const basicColors = {
   navy: '#000080',
 };
 
-const YOURE_PALETTE_THEME = {};
+const YOURE_PALETTE_THEME: Partial<typeof palette> = {
+  'magenta/fuchsia': '#FF00FF',
+  'darkGray/darkGrey': '#A9A9A9',
+};
