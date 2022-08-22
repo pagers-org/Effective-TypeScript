@@ -11,7 +11,7 @@ const order = (menu: Menu) => {
   return `I ordered ${menu.coffee} and ${menu.bread}`;
 };
 
-const myOrder = {
+const myOrder: Menu = {
   coffee: 'latte',
   bread: 'toast',
 };
