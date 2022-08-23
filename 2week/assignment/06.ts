@@ -8,7 +8,7 @@ interface Person {
 }
 
 // type Korean<T> = Person & ;
-// 흠.. 모르겠다 .....
+type Korean = Person & { language: { 0: "ko"; [key: number]: Language } };
 
 const isKorean = (person: Person): person is Korean => {
   if (person.language) {
