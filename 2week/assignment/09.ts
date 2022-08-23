@@ -14,6 +14,6 @@ const order = (menu: Menu) => {
 const myOrder = {
   coffee: 'latte',
   bread: 'toast',
-};
+} as const;
 
 order(myOrder);

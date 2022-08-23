@@ -3,6 +3,7 @@ interface Person {
   name: string;
   age: number;
   country: string;
+  sex: 'main' | 'female';
 }
 
 const person: Person = {
