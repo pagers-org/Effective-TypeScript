@@ -7,20 +7,18 @@ interface Person {
 }
 
 const isKorean = (person: Person) => {
-  console.log(person)
-  console.log(person.language)
-  if (person.language) {
-    if (person.language.includes('ko')) return true;
+  const { language } = person;
+  if (language) {
+    if (language.includes('ko')) return true;
   }
+
   return false;
 };
 
-const GIL_DONG: Person = {
-  name: 'dd',
+console.log(isKorean({
+  name: 'John',
   age: 33,
   language: ['ko', 'en'],
-}
+}))
 
-console.log(isKorean(GIL_DONG))
-
-// 할당 시점에 타입을 추론하기 때문에 타입 선언을 추가
+// 객체 비구조화 할당을 사용해 중복을 제거하고, 타입을 추론
