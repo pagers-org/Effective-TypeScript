@@ -1,6 +1,7 @@
-// 9. 다음에서 하나의 타입구문만을 넣어 오류를 해결해보세요.
-type Coffee = 'mocha' | 'americano' | 'latte';
-type Bread = 'croissant' | 'toast';
+// // 9. 다음에서 하나의 타입구문만을 넣어 오류를 해결해보세요.
+
+type Coffee = "mocha" | "americano" | "latte";
+type Bread = "croissant" | "toast";
 
 interface Menu {
   coffee: Coffee;
@@ -12,8 +13,8 @@ const order = (menu: Menu) => {
 };
 
 const myOrder = {
-  coffee: 'latte',
-  bread: 'toast',
-};
+  coffee: "latte",
+  bread: "toast",
+} as Menu;
 
 order(myOrder);

@@ -3,11 +3,12 @@ interface Person {
   name: string;
   age: number;
   country: string;
+  sex: string;
 }
 
 const person: Person = {
-  name: 'Joe',
+  name: "Joe",
   age: 10,
-  country: 'ko',
-  sex: 'male',
+  country: "ko",
+  sex: "male",
 };

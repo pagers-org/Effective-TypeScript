@@ -4,5 +4,7 @@ const callBackFn = (a, b) => {
 };
 
 const someFn = (callback: (a: string, b: string) => string) => {
-  return callback('apple', 'banana');
+  return callback(("apple", "banana"));
 };
+
+someFn((a, b) => `These are ${a} and ${b}`);
