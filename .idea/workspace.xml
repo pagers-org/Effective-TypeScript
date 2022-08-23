@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74d6e22e-ba09-425d-b382-99db67f3201c" name="변경" comment="">
+    <list default="true" id="2058752c-fc9c-4f6a-b32d-ddc4df0dbfda" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1week/assignment/02.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/02.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1week/assignment/04.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/04.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1week/assignment/05.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/05.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1week/assignment/06.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/06.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1week/assignment/07.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/07.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1week/assignment/08.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/08.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1week/assignment/09.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/09.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1week/assignment/10.ts" beforeDir="false" afterPath="$PROJECT_DIR$/1week/assignment/10.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2week/assignment/01.ts" beforeDir="false" afterPath="$PROJECT_DIR$/2week/assignment/01.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2week/assignment/02.ts" beforeDir="false" afterPath="$PROJECT_DIR$/2week/assignment/02.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2week/assignment/03.ts" beforeDir="false" afterPath="$PROJECT_DIR$/2week/assignment/03.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2week/assignment/04.ts" beforeDir="false" afterPath="$PROJECT_DIR$/2week/assignment/04.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2week/assignment/06.ts" beforeDir="false" afterPath="$PROJECT_DIR$/2week/assignment/06.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,28 +29,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Language Defaults",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Language Defaults&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="74d6e22e-ba09-425d-b382-99db67f3201c" name="변경" comment="" />
+      <changelist id="2058752c-fc9c-4f6a-b32d-ddc4df0dbfda" name="Changes" comment="" />
       <created>1659863853082</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659863853082</updated>
       <workItem from="1659863857034" duration="5346000" />
+      <workItem from="1660986093269" duration="7000" />
     </task>
     <servers />
   </component>
@@ -77,6 +76,11 @@
           <url>file://$PROJECT_DIR$/1week/assignment/02.ts</url>
           <line>163</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/2week/assignment/03.ts</url>
+          <line>2</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

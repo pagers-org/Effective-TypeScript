@@ -20,7 +20,7 @@ class List<T> {
     this.items.splice(index, 1);
   }
 
-  update(index: number, item: string) {
+  update(index: number, item: T) {
     this.items[index] = item;
   }
 }
