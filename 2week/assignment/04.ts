@@ -2,12 +2,14 @@
 
 function print(strs: string | string[] | null) {
   if (strs) {
-    if (typeof strs === 'object') {
+    if (Array.isArray(strs)) {
       for (const s of strs) {
         console.log(s);
       }
-    } else if (typeof strs === 'string') {
-      console.log(strs);
+    } else {
+      console.log('String');
     }
+  } else {
+    console.log('Null')
   }
 }
