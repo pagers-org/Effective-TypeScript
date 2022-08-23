@@ -1,10 +1,9 @@
 // 2. 타입구문을 명확하게 지정해주세요.
-// - 사용하는 tickle 타입에 맞게 interface Toy 타입을 수정하는 것이
-// - '타입구문'을 명확하게 한다는 의미일까??
 
+// id를 사용하는 타입을 기준으로 명시하는 것이 옳은지 잘 모르겠습니다.
 interface Toy {
   name: string;
-  id: string;
+  id: number | string;
   price: number;
 }
 
@@ -12,7 +11,7 @@ const showToy = (toy: Toy) => {
   return toy.name;
 };
 
-const tickle = {
+const tickle: Toy = {
   name: 'Tickle',
   id: '1100',
   price: 140,
