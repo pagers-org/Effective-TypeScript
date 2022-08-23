@@ -6,8 +6,7 @@ declare function getSmallPet(): Fish | Bird;
 
 // fish인지 판별 할 커스텀 함수를 작성해주세요.
 function isFish<T>(pet: Fish | Bird): pet is Fish {
-  if ('swim' in pet) return true
-  return false
+  return 'swim' in pet
 }
 
 const pet = getSmallPet();

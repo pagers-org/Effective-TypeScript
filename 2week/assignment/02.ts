@@ -1,11 +1,11 @@
 // 2. 타입구문을 명확하게 지정해주세요.
 interface Toy {
   name: string;
-  id: string;
+  id: number;
   price: number;
 }
 
-const tickle = {
+const tickle: Toy = {
   name: 'Tickle',
   id: '1100',
   price: 140,
@@ -16,5 +16,3 @@ const showToy = (toy: Toy) => {
 };
 
 showToy(tickle);
-
-export {}
