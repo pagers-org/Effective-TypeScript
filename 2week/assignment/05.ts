@@ -5,7 +5,9 @@ type Bird = { fly: () => void };
 declare function getSmallPet(): Fish | Bird;
 
 // fish인지 판별 할 커스텀 함수를 작성해주세요.
-function isFish(pet) {}
+function isFish(pet: unknown): pet is Fish {
+  return typeof pet === 'object' && !!pet && pet.hasOwnProperty('swim');
+}
 
 const pet = getSmallPet();
 
