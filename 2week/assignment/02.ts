@@ -1,0 +1,19 @@
+// 2. 타입구문을 명확하게 지정해주세요.
+interface Toy {
+  name: string;
+  id: number | string;
+  price: number;
+}
+
+const tickle :Toy = {
+  name: 'Tickle',
+  id: '1100',
+  price: 140,
+};
+
+const showToy = (toy: Toy) => {
+  const {name} = toy;
+  return name;
+};
+
+showToy(tickle);
