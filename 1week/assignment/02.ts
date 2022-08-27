@@ -163,4 +163,19 @@ const basicColors = {
   navy: '#000080',
 };
 
-const YOURE_PALETTE_THEME = {};
+type MyPalette = {
+  purple: string;
+  silver: string;
+  white: string;
+  black: string;
+};
+
+
+const YOUR_PALETTE_THEME: MyPalette = {
+  purple: palette.purple,
+  silver: palette.silver,
+  white: basicColors.white,
+  black: basicColors.black,
+};
+
+console.log(YOUR_PALETTE_THEME.silver);

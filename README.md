@@ -27,6 +27,7 @@
 > 📌과제 코드의 저작권은 [파랑](https://github.com/InSeong-So)에게 있습니다.
 
 - 1회차 과제 [Link](https://github.com/FECrash/Effective-TypeScript/tree/main/1week/assignment)
+- 2회차 과제 [Link](https://github.com/FECrash/Effective-TypeScript/tree/main/2week/assignment)
 
 <br>
 <hr>
