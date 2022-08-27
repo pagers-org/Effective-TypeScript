@@ -31,3 +31,5 @@ const personC: Person = {
   birth: null,
   death: new Date('1954/06/07'),
 };
+
+export default {};
