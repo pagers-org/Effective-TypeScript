@@ -3,13 +3,13 @@
  */
 
 function prettyPrint(x: any): string {
-  if (typeof x === 'string') return `"${x}"`;
+  if (typeof x === "string") return `"${x}"`;
 
-  if (typeof x === 'number') return String(x);
+  if (typeof x === "number") return String(x);
 
-  if (Array.isArray(x)) return '[' + x.mop(prettyPrint).join(', ') + ']';
+  if (Array.isArray(x)) return "[" + x.map(prettyPrint).join(", ") + "]";
 
-  if (typeof x === 'object') return Object.keys(x).join(', ');
+  if (typeof x === "object" && x !== null) return Object.keys(x).join(", ");
 
-  return 'etc.';
+  return "etc.";
 }

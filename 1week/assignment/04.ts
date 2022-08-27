@@ -5,14 +5,23 @@
  * - 특정 index의 원소를 변경하는 update 메서드를 만들어주세요.
  */
 
-class List {
-  private items: any[] = [];
+class List<T> {
+  private items: T[] = [];
 
-  add(item: any) {
+  add(item: T) {
     this.items.push(item);
   }
 
   get(index: number) {
     return this.items[index];
+  }
+
+  remove(item: T) {
+    const targetIndex = this.items.indexOf(item);
+    this.items.splice(targetIndex, 1);
+  }
+
+  update(index: number, item: T) {
+    this.items[index] = item;
   }
 }
