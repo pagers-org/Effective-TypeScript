@@ -12,19 +12,14 @@ interface SignUpData {
   id: string;
   password: string;
   confirmPassword: string;
-  additionalInputAgreement: boolean;
-  address?: string;
-  phone?: string;
+  additionalInputAgreement ?: {
+    address ?: string;
+    phone ?: string;
+  };
 }
 
-declare function postSignUpToV1(signupForm: { id: string; password: string; confirmPassword: string }): void;
-declare function postSignUpToV2(signupForm: {
-  id: string;
-  password: string;
-  confirmPassword: string;
-  address: string;
-  phone: string;
-}): void;
+declare function postSignUpToV1(signupForm: SignUpData): void;
+declare function postSignUpToV2(signupForm: SignUpData): void;
 
 const sendSignup = (formData: SignUpData) => {
   if (formData.additionalInputAgreement) {
