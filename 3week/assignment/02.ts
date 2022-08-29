@@ -1,10 +1,49 @@
 /**
- * 문제2
- * 위의  PapagoParamsSource와 PapagoParamsTarget 를 조합하여 명세에서 언급하는
- * "번역할 수 있는 원본 언어와 목적 언어는 다음과 같습니다." 의 제약조건을 참고하여 PapagoParams 인터페이스를 개선해 주세요.
+ * 문제1
+ * 다음의 파파고 번역 api 명세를 확인하고
+ * 파라미터에 필요한 source 와 target 을 좁혀주세요.
+ * @description: 링크: https://developers.naver.com/docs/papago/papago-nmt-api-reference.md
  * */
-interface PapagoParams {
-  source: PapagoParamsSource;
-  target: PapagoParamsTarget;
-  text: string;
+
+ interface KoSourceCode {
+  source: 'ko',
+  target: 'en' | 'ja' | 'zh-CN' | 'zh-TW' | 'vi' | 'id' | 'th' | 'de' |'ru' | 'es' | 'it' | 'fr',
 }
+interface KoTargetCode {
+  source: 'en' | 'ja' | 'zh-CN' | 'zh-TW' | 'vi' | 'id' | 'th' | 'de' |'ru' | 'es' | 'it' | 'fr',
+  target: 'ko',
+}
+
+interface EnSourceCode {
+  source: 'en',
+  target: 'ja' | 'fr' | 'zh-CN' | 'zh-TW', 
+}
+
+interface EnTargetCode {
+  source: 'ja' | 'fr' | 'zh-CN' | 'zh-TW', 
+  target: 'en',
+}
+
+interface JaSourceCode {
+  source: 'js',
+  target: 'zh-CN' | 'zh-TW', 
+}
+
+interface JaTargetCode {
+  source: 'zh-CN' | 'zh-TW', 
+  target: 'js',
+}
+
+interface ZhSourceCode {
+  source: 'zh-CN',
+  target: 'zh-TW'
+}
+
+interface ZhTargetCode {
+  source: 'zh-TW'
+  target: 'zh-CN',
+}
+
+type PapagoParamsCode = KoSourceCode | KoTargetCode | EnSourceCode | EnTargetCode | JaSourceCode | JaTargetCode | ZhSourceCode | ZhTargetCode;
+
+type PapagoParams = PapagoParamsCode & { text: string }
