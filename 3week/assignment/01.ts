@@ -4,5 +4,5 @@
  * 파라미터에 필요한 source 와 target 을 좁혀주세요.
  * @description: 링크: https://developers.naver.com/docs/papago/papago-nmt-api-reference.md
  * */
-type PapagoParamsSource = string;
-type PapagoParamsTarget = string;
+type PapagoParamsSource = "ko" | "en" | "ja" | "zh-CN" | "zh-TW" | "vi" | "id" | "th" | "de" | "ru" | "es" | "it" | "fr";
+type PapagoParamsTarget = PapagoParamsSource;
