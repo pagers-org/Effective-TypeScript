@@ -20,11 +20,13 @@ interface KakaoUserProfile {
 }
 
 interface KakaoUser {
+  type: "kakao";
   name: string;
   profile: KakaoUserProfile;
 }
 
 interface NaverUser {
+  type: "naver"
   nickname: string;
   name: string;
   profile_image: string;
@@ -36,11 +38,24 @@ declare function getUser(userId: string): NaverUser | KakaoUser;
 function renderUserProfile(userId: string) {
   const app = document.querySelector('#app')!;
   const user = getUser(userId);
-  app.innerHTML = `
+  if(user.type === "kakao"){
+    app.innerHTML = `
    <div>
        <span>이름: ${user.name}</span>
-       <span>닉네임: ${user?.profile?.nickname || user.nickname}</span>
-       <img src="${user?.profile?.profile_image_url || user.profile_image}"></img>
+       <span>닉네임: ${user?.profile?.nickname}</span>
+       <img src="${user?.profile?.profile_image_url}"></img>
     </div>
     `;
+  } else {
+    app.innerHTML = `
+   <div>
+       <span>이름: ${user.name}</span>
+       <span>닉네임: ${ user.nickname}</span>
+       <img src="${ user.profile_image}"></img>
+    </div>
+    `;
+  }
 }
+
+// 1. 태그 유니온을 사용해서 kakao의 유저 정보인지 naver의 유저 정보인지 명확히 받을 수 있도록 했습니다. 
+// 2. 이를 조건문을 통해서 분기처리 할 수 있도록 했습니다. 
