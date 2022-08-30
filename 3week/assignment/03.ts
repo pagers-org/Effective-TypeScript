@@ -6,28 +6,49 @@
 
 // 예시 인터페이스이고, 본인이 생각하는 더 나은 인터페이스로 바꾸셔도 됩니다.
 interface ButtonStyle {
-  color: string;
+	color: string;
 }
 
-interface StopWatchState {
-  state: 'ready' | 'running' | 'stopped';
-  startButton?: {
-    icon: 'startButton';
-    style: ButtonStyle;
-  };
-  pauseButton?: {
-    icon: 'pauseButton';
-    style: ButtonStyle;
-  };
-  resetButton?: {
-    icon: 'resetButton';
-    style: ButtonStyle;
-  };
-  addLapButton?: {
-    icon: 'addLapButton';
-    style: ButtonStyle;
-  };
-  lappedTimeList?: string[];
-  timeFormStart: string;
-  timeFormLastLap: string;
+interface StopWatchReadyState {
+	state: "ready";
+	startButton: {
+		icon: "startButton";
+		style: ButtonStyle;
+	};
 }
+
+interface StopWatchRunningState {
+	state: "running";
+	pauseButton: {
+		icon: "pauseButton";
+		style: ButtonStyle;
+	};
+	addLapButton: {
+		icon: "addLapButton";
+		style: ButtonStyle;
+	};
+	lappedTimeList: string[];
+}
+
+interface StopWatchStoppedState {
+	state: "stopped";
+	startButton: {
+		icon: "startButton";
+		style: ButtonStyle;
+	};
+	resetButton: {
+		icon: "resetButton";
+		style: ButtonStyle;
+	};
+	lappedTimeList: string[];
+}
+
+type StopWatchStateType =
+	| StopWatchReadyState
+	| StopWatchRunningState
+	| StopWatchStoppedState;
+
+type StopWatchState = StopWatchStateType & {
+	timeFormStart: string;
+	timeFormLastLap: string;
+};
