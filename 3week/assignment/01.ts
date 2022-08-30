@@ -6,3 +6,5 @@
  * */
 type PapagoParamsSource = string;
 type PapagoParamsTarget = string;
+
+type LanguageCode = 'ko' | 'en' | 'ja' | 'zh-CN' | 'zh-TW' | 'vi' | 'id' | 'th' | 'de' | 'ru' | 'es' | 'it' | 'fr'

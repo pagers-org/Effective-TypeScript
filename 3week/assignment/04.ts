@@ -30,17 +30,23 @@ interface NaverUser {
   profile_image: string;
 }
 
+// 이 타입으로도 활용할 수 있을 것 같은데 잘 모르겠네요 ㅜㅜ
+type IsNaver<T extends NaverUser | KakaoUser> = T extends NaverUser ? NaverUser : KakaoUser;
+
 declare function getUser(userId: string): NaverUser | KakaoUser;
 
 // 다음 오류를 해결하기위해 할 수 있는 모든 대안을 적용해주세요.
 function renderUserProfile(userId: string) {
   const app = document.querySelector('#app')!;
   const user = getUser(userId);
+
+  const isKakaoUser = (user: KakaoUser | NaverUser): user is KakaoUser => (user as KakaoUser).profile ? true : false;
+
   app.innerHTML = `
    <div>
        <span>이름: ${user.name}</span>
-       <span>닉네임: ${user?.profile?.nickname || user.nickname}</span>
-       <img src="${user?.profile?.profile_image_url || user.profile_image}"></img>
+       <span>닉네임: ${isKakaoUser(user) ? user.profile.nickname : user.nickname}</span>
+       <img src="${isKakaoUser(user) ? user.profile.profile_image_url : user.profile_image}"></img>
     </div>
     `;
 }
