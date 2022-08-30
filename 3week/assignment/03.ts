@@ -30,7 +30,7 @@ interface RunningStopWatch {
 }
 
 interface StoppedStopWatch {
-  state : "ready";
+  state : "stopped";
   startButton: {
     icon: 'startButton';
     style: ButtonStyle;
