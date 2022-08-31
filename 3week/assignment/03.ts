@@ -52,3 +52,5 @@ type StopWatchState = StopWatchStateType & {
 	timeFormStart: string;
 	timeFormLastLap: string;
 };
+
+// 인터페이스 유니온과 intersection 사용

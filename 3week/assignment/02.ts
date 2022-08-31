@@ -47,3 +47,5 @@ interface ZhTargetCode {
 type PapagoParamsCode = KoSourceCode | KoTargetCode | EnSourceCode | EnTargetCode | JaSourceCode | JaTargetCode | ZhSourceCode | ZhTargetCode;
 
 type PapagoParams = PapagoParamsCode & { text: string }
+
+// 잘못된 조합방지를 위해 인터페이스의 유니온으로 구현

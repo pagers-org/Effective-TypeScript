@@ -37,3 +37,5 @@ const sendSignup = (formData: SignUpDataWithAdditionalInput) => {
     postSignUpToV1(formData);
   }
 };
+
+// item 29의 너로남불 방식으로 구현해보고 싶었는데 잘 안되어서 단순하게 유니온으로 구현

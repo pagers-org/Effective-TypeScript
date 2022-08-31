@@ -62,3 +62,5 @@ function renderUserProfile(userId: string) {
      `;
 	}
 }
+
+// 인터페이스 유니온 사용
