@@ -13,8 +13,8 @@ interface SignUpData {
   password: string;
   confirmPassword: string;
   additionalInputAgreement ?: {
-    address ?: string;
-    phone ?: string;
+    address : string;
+    phone : string;
   };
 }
 
