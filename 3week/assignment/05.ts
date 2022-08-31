@@ -9,7 +9,7 @@
  * */
 
 interface AdditionalInputAgreementSignUpData extends Omit<SignUpData, "additionalInputAgreement"> {
-  additionalInputAgreement: true;
+  // additionalInputAgreement: true;
   address: string;
   phone: string;
 }
@@ -18,7 +18,12 @@ interface SignUpData {
   id: string;
   password: string;
   confirmPassword: string;
-  additionalInputAgreement:false;
+  // additionalInputAgreement:false;
+}
+
+const isAdditionalInput = (formData: SignUpData | AdditionalInputAgreementSignUpData) : formData is AdditionalInputAgreementSignUpData   => {
+  return Object(formData).hasOwnProperty("address") && Object(formData).hasOwnProperty("phone");
+
   
 }
 
@@ -32,7 +37,7 @@ declare function postSignUpToV2(signupForm: {
 }): void;
 
 const sendSignup = (formData: SignUpData | AdditionalInputAgreementSignUpData) => {
-  if (formData.additionalInputAgreement) {
+  if (isAdditionalInput(formData)) {
     postSignUpToV2(formData);
   } else {
     postSignUpToV1(formData);
