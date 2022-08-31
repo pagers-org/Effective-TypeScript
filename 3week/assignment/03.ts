@@ -5,29 +5,50 @@
  * */
 
 // 예시 인터페이스이고, 본인이 생각하는 더 나은 인터페이스로 바꾸셔도 됩니다.
+type Color = 'red' | 'green' | 'blue' | 'yellow';
 interface ButtonStyle {
-  color: string;
+  color: Color;
 }
 
-interface StopWatchState {
-  state: 'ready' | 'running' | 'stopped';
-  startButton?: {
-    icon: 'startButton';
-    style: ButtonStyle;
-  };
-  pauseButton?: {
-    icon: 'pauseButton';
-    style: ButtonStyle;
-  };
-  resetButton?: {
-    icon: 'resetButton';
-    style: ButtonStyle;
-  };
-  addLapButton?: {
-    icon: 'addLapButton';
-    style: ButtonStyle;
-  };
-  lappedTimeList?: string[];
-  timeFormStart: string;
-  timeFormLastLap: string;
+interface StopWatchTimeForm {
+    timeFormStart: string;
+    timeFormLastLap: string;
 }
+
+interface StopWatchReadyState extends StopWatchTimeForm{
+    state: 'ready';
+    startButton: {
+      icon: 'startButton';
+      style: ButtonStyle;
+    };
+  timeFormStart: '00:00:00:000';
+  timeFormLastLap: '00:00:00:000';
+}
+
+interface StopWatchRunningState extends StopWatchTimeForm{
+    state: 'running';
+    pauseButton: {
+      icon: 'pauseButton';
+      style: ButtonStyle;
+    };
+    addLapButton: {
+      icon: 'addLapButton';
+      style: ButtonStyle;
+    };
+  lappedTimeList?: string[];
+}
+
+interface StopWatchStoppedState extends StopWatchTimeForm{
+    state: 'stopped';
+    startButton: {
+      icon: 'startButton';
+      style: ButtonStyle;
+    };
+    resetButton: {
+      icon: 'resetButton';
+      style: ButtonStyle;
+    };
+    lappedTimeList?: string[];
+}
+
+type StopWatchState = StopWatchReadyState | StopWatchRunningState | StopWatchStoppedState;
