@@ -4,11 +4,11 @@
 
 // best: generic
 // or: generic 받아서 userRole 타입으로?
-type UserInformation = {
+type UserInformation<T> = {
   userId: string;
   userName: string;
-  userRole: UserRole;
+  userRole: UserRole | T;
   password: string;
 };
 
-type UserRole = 'normal' | 'vip' | 'admin';
+type UserRole = "normal" | "vip" | "admin";
