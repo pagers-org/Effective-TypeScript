@@ -14,53 +14,55 @@
  * 위의 명세를 참고하여 다음과 같은 타입을 정의했습니다.
  * */
 
- interface KakaoUserProfile {
-	nickname: string;
-	profile_image_url: string;
+interface KakaoUserProfile {
+  nickname: string;
+  profile_image_url: string;
 }
 
 interface KakaoUser {
-	type: "kakao";
-	name: string;
-	profile: KakaoUserProfile;
+  type: "kakao";
+  name: string;
+  profile: KakaoUserProfile;
 }
 
 interface NaverUser {
-	type: "naver";
-	nickname: string;
-	name: string;
-	profile_image: string;
+  type: "naver";
+  nickname: string;
+  name: string;
+  profile_image: string;
 }
 
 declare function getUser(userId: string): NaverUser | KakaoUser;
 
 // 다음 오류를 해결하기위해 할 수 있는 모든 대안을 적용해주세요.
+
+const userTemplate = (
+  userName: string,
+  userNickname: string,
+  userProfileImage: string
+): string => `
+	<div>
+		<span>이름: ${userName}</span>
+		<span>닉네임: ${userNickname}</span>
+		<img src="${userProfileImage}"></img>
+	</div>
+`;
+
 function renderUserProfile(userId: string) {
-	const app = document.querySelector("#app")!;
-	const user = getUser(userId);
-	const { type } = user;
-	if (type === "kakao") {
-		const {
-			name,
-			profile: { nickname, profile_image_url },
-		} = user;
-		app.innerHTML = `
-    <div>
-        <span>이름: ${name}</span>
-        <span>닉네임: ${nickname}</span>
-        <img src="${profile_image_url}"></img>
-     </div>
-     `;
-	} else if (type === "naver") {
-		const { name, nickname, profile_image } = user;
-		app.innerHTML = `
-    <div>
-        <span>이름: ${name}</span>
-        <span>닉네임: ${nickname}</span>
-        <img src="${profile_image}"></img>
-     </div>
-     `;
-	}
+  const app = document.querySelector("#app")!;
+  const user = getUser(userId);
+  const { type } = user;
+
+  if (type === "kakao") {
+    const {
+      name,
+      profile: { nickname, profile_image_url },
+    } = user;
+    app.innerHTML = userTemplate(name, nickname, profile_image_url);
+  } else if (type === "naver") {
+    const { name, nickname, profile_image } = user;
+    app.innerHTML = userTemplate(name, nickname, profile_image);
+  }
 }
 
 // 인터페이스 유니온 사용
