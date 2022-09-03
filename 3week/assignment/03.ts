@@ -4,27 +4,29 @@
  * https://online-stopwatch.ko.downloadastro.com/tools/
  * */
 
+// 스탑워치 링크가 막혀서 확인이 안되네요 😢 나중에 다시 살펴보겠습니다~~
+
 // 예시 인터페이스이고, 본인이 생각하는 더 나은 인터페이스로 바꾸셔도 됩니다.
 interface ButtonStyle {
   color: string;
 }
 
 interface StopWatchState {
-  state: 'ready' | 'running' | 'stopped';
+  state: "ready" | "running" | "stopped";
   startButton?: {
-    icon: 'startButton';
+    icon: "startButton";
     style: ButtonStyle;
   };
   pauseButton?: {
-    icon: 'pauseButton';
+    icon: "pauseButton";
     style: ButtonStyle;
   };
   resetButton?: {
-    icon: 'resetButton';
+    icon: "resetButton";
     style: ButtonStyle;
   };
   addLapButton?: {
-    icon: 'addLapButton';
+    icon: "addLapButton";
     style: ButtonStyle;
   };
   lappedTimeList?: string[];

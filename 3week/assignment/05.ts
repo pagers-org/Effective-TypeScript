@@ -8,16 +8,29 @@
  * 타입을 좀 더 좁게 관리할 수 있도록 개선해주세요.
  * */
 
-interface SignUpData {
+type SignUpData =
+  | {
+      id: string;
+      password: string;
+      confirmPassword: string;
+    } & (
+      | ({ additionalInputAgreement: true } & additionalSignUpData)
+      | { additionalInputAgreement: false }
+    );
+
+interface additionalSignUpData {
+  address: string;
+  phone: string;
+}
+
+declare function postSignUp(signupForm: SignUpData): void;
+
+declare function postSignUpToV1(signupForm: {
   id: string;
   password: string;
   confirmPassword: string;
-  additionalInputAgreement: boolean;
-  address?: string;
-  phone?: string;
-}
+}): void;
 
-declare function postSignUpToV1(signupForm: { id: string; password: string; confirmPassword: string }): void;
 declare function postSignUpToV2(signupForm: {
   id: string;
   password: string;
@@ -27,9 +40,5 @@ declare function postSignUpToV2(signupForm: {
 }): void;
 
 const sendSignup = (formData: SignUpData) => {
-  if (formData.additionalInputAgreement) {
-    postSignUpToV2(formData);
-  } else {
-    postSignUpToV1(formData);
-  }
+  postSignUp(formData);
 };

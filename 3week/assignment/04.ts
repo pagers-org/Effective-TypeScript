@@ -20,11 +20,13 @@ interface KakaoUserProfile {
 }
 
 interface KakaoUser {
+  _brand: "Kakao";
   name: string;
   profile: KakaoUserProfile;
 }
 
 interface NaverUser {
+  _brand: "Naver";
   nickname: string;
   name: string;
   profile_image: string;
@@ -34,13 +36,19 @@ declare function getUser(userId: string): NaverUser | KakaoUser;
 
 // 다음 오류를 해결하기위해 할 수 있는 모든 대안을 적용해주세요.
 function renderUserProfile(userId: string) {
-  const app = document.querySelector('#app')!;
+  const app = document.querySelector("#app")!;
   const user = getUser(userId);
   app.innerHTML = `
    <div>
        <span>이름: ${user.name}</span>
-       <span>닉네임: ${user?.profile?.nickname || user.nickname}</span>
-       <img src="${user?.profile?.profile_image_url || user.profile_image}"></img>
+       <span>닉네임: ${
+         user._brand === "Kakao" ? user.profile.nickname : user.nickname
+       }</span>
+       <img src="${
+         user._brand === "Kakao"
+           ? user.profile.profile_image_url
+           : user.profile_image
+       }"></img>
     </div>
     `;
 }
