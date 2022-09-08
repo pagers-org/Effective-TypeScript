@@ -8,34 +8,60 @@
  * 타입을 좀 더 좁게 관리할 수 있도록 개선해주세요.
  * */
 
-interface SignupDataBasic {
+ interface SignupDataBasic {
   id: string;
-  password: string;
-  confirmPassword: string;
-  additionalInputAgreement: boolean;
+	password: string;
+	confirmPassword: string;
+	additionalInputAgreement: false;
 }
 
-interface SignUpDataWithAdditionalInput extends SignupDataBasic {
+interface SignupDataWithAdditionalInput {
+  id: string;
+	password: string;
+	confirmPassword: string;
+	additionalInputAgreement: true;
   address: string;
   phone: string;
 }
 
-declare function postSignUpToV1(signupForm: { id: string; password: string; confirmPassword: string }): void;
-declare function postSignUpToV2(signupForm: {
-  id: string;
-  password: string;
-  confirmPassword: string;
-  address: string;
-  phone: string;
+type SignupData = SignupDataBasic | SignupDataWithAdditionalInput;
+
+// type SignupDataOptions<T> = T extends { addtionalInputAgreement : false } ? SignupDataBasic : SignupDataWithAdditionalInput;
+
+declare function postSignupToV1(signupForm: {
+	id: string;
+	password: string;
+	confirmPassword: string;
 }): void;
 
-const sendSignup = (formData: SignUpDataWithAdditionalInput) => {
-  const { additionalInputAgreement } = formData;
-  if (additionalInputAgreement) {
-    postSignUpToV2(formData);
-  } else {
-    postSignUpToV1(formData);
-  }
+declare function postSignupToV2(signupForm: {
+	id: string;
+	password: string;
+	confirmPassword: string;
+	address: string;
+	phone: string;
+}): void;
+
+declare function isAdditionalInputAgreement (data: SignupData): data is SignupDataWithAdditionalInput;
+
+// 타입 추론
+const sendSignup1 = (formData: SignupData) => {
+	if (formData.additionalInputAgreement) {
+    const { additionalInputAgreement, ...restFormData} = formData;
+		postSignupToV2(restFormData);
+	} else {
+    const { additionalInputAgreement, ...restFormData} = formData;
+		postSignupToV1(restFormData);
+	}
 };
 
-// item 29의 너로남불 방식으로 구현해보고 싶었는데 잘 안되어서 단순하게 유니온으로 구현
+// 타입 가드
+const sendSignup2 = (formData: SignupData) => {
+	if (isAdditionalInputAgreement(formData)) {
+    const { additionalInputAgreement, ...restFormData} = formData;
+		postSignupToV2(restFormData);
+	} else {
+    const { additionalInputAgreement, ...restFormData} = formData;
+		postSignupToV1(restFormData);
+	}
+};
